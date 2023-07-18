@@ -1,0 +1,14 @@
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1750px;
+  padding: 0px 20px;
+  margin: 0 auto;
+}
+
+.pd-20 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}

@@ -1,0 +1,340 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  -webkit-font-smooth: antialiased;
+}
+
+body,
+input,
+text-area,
+button {
+  font-family: "HDI Pro Book";
+}
+
+input,
+button,
+textarea {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1750px;
+  padding: 0px 20px;
+  margin: 0 auto;
+}
+
+.pd-20 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+@font-face {
+  font-family: "HDI Pro Bold";
+  src: url("../assets/fonts/HDIPro-Bold.ttf");
+}
+@font-face {
+  font-family: "HDI Pro Book";
+  src: url("../assets/fonts/HDIPro-Book.ttf");
+}
+@font-face {
+  font-family: "HDI Pro BookIt";
+  src: url("../assets/fonts/HDIPro-BookIt.ttf");
+}
+@font-face {
+  font-family: "HDI Pro MdIt";
+  src: url("../assets/fonts/HDIPro-MdIt.ttf");
+}
+@font-face {
+  font-family: "HDI Pro Medium";
+  src: url("../assets/fonts/HDIPro-Medium.ttf");
+}
+@font-face {
+  font-family: "HDI ProCND Black";
+  src: url("../assets/fonts/HDIProCnd-Black.ttf");
+}
+@font-face {
+  font-family: "HDI ProCND Bold";
+  src: url("../assets/fonts/HDIProCnd-Bold.ttf");
+}
+@font-face {
+  font-family: "HDI ProCND Book";
+  src: url("../assets/fonts/HDIProCnd-Book.ttf");
+}
+@font-face {
+  font-family: "HDI ProCND Medium";
+  src: url("../assets/fonts/HDIProCnd-Medium.ttf");
+}
+.menu {
+  min-width: 100%;
+  min-height: 100vh;
+  background: #fafafa;
+}
+.menu > header {
+  position: relative;
+  padding: 1.3125rem 0px;
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.0784313725);
+  z-index: 10;
+}
+.menu > header .header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu > header .header__content button {
+  background: none;
+  border: none;
+  color: #6eab28;
+  font-size: 14px;
+  font-family: "HDI Pro Bold";
+  font-weight: 700;
+}
+.menu .menu__wrapper {
+  display: flex;
+}
+.menu .menu__wrapper .menu__itens {
+  display: flex;
+  justify-content: center;
+  min-width: 22.125rem;
+  min-height: calc(100vh - 84px);
+  padding-top: 3.75rem;
+  background: white;
+}
+.menu .menu__wrapper .menu__itens .menu__list {
+  padding: 0;
+  margin: 0;
+}
+.menu .menu__wrapper .menu__itens .menu__list > .menu__item span {
+  position: relative;
+}
+.menu .menu__wrapper .menu__itens .menu__list > .menu__item span::after {
+  content: "";
+  position: absolute;
+  top: calc(50% + 2px);
+  left: 0;
+  border-top: 4px solid #000000;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  transform: translate(5px, -50%);
+  transition: all 0.3s linear;
+}
+.menu .menu__wrapper .menu__itens .menu__list > .menu__item,
+.menu .menu__wrapper .menu__itens .menu__list a {
+  margin-bottom: 1.875rem;
+  text-decoration: none;
+  list-style: none;
+  font-family: "HDI Pro Book";
+  font-size: 0.875rem;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.menu .menu__wrapper .menu__itens .menu__list > .menu__item:last-child,
+.menu .menu__wrapper .menu__itens .menu__list a:last-child {
+  margin-bottom: 0rem;
+}
+.menu .menu__wrapper .menu__itens .menu__list > .menu__item.isActive,
+.menu .menu__wrapper .menu__itens .menu__list a.isActive {
+  font-family: "HDI Pro Bold";
+}
+.menu .menu__wrapper .menu__itens .menu__list > .menu__item.isActive span::after,
+.menu .menu__wrapper .menu__itens .menu__list a.isActive span::after {
+  top: calc(50% + 2px);
+  transform: translate(5px, -50%) rotate(180deg);
+}
+.menu .menu__wrapper .menu__itens .menu__list > .menu__item.isActive .sub__menu,
+.menu .menu__wrapper .menu__itens .menu__list a.isActive .sub__menu {
+  animation: slideDown 2s linear forwards;
+}
+.menu .menu__wrapper .menu__itens .menu__list > .menu__item .sub__menu,
+.menu .menu__wrapper .menu__itens .menu__list a .sub__menu {
+  max-height: 0;
+  margin-left: 20px;
+  overflow: hidden;
+}
+.menu .menu__wrapper .menu__itens .menu__list > .menu__item .sub__menu .sub__link,
+.menu .menu__wrapper .menu__itens .menu__list a .sub__menu .sub__link {
+  list-style: none;
+  margin: 0.75rem 0px;
+}
+.menu .menu__wrapper .menu__itens .menu__list > .menu__item .sub__menu .sub__link:last-child,
+.menu .menu__wrapper .menu__itens .menu__list a .sub__menu .sub__link:last-child {
+  margin: 0px;
+}
+.menu .menu__wrapper .menu__itens .menu__list > .menu__item .sub__menu .sub__link a,
+.menu .menu__wrapper .menu__itens .menu__list a .sub__menu .sub__link a {
+  font-family: "HDI Pro Book";
+  font-size: 0.75rem;
+  color: #000000;
+}
+.menu .menu__wrapper .content {
+  width: 100%;
+  margin: 3.75rem;
+  padding: 3.125rem;
+  background: white;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.0588235294);
+  border-radius: 5px;
+}
+
+@keyframes slideDown {
+  from {
+    max-height: 0px;
+  }
+  to {
+    max-height: 700px;
+  }
+}
+.input__field,
+.textarea__field,
+.select__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4375rem;
+  cursor: pointer;
+}
+.input__field .select__field-item,
+.textarea__field .select__field-item,
+.select__field .select__field-item {
+  width: 100%;
+  padding: 0.625rem 1.375rem;
+  font-family: "HDI Pro Book";
+  font-size: 0.875rem;
+  color: #9d9d9c;
+  border: 1px solid #000000;
+}
+.input__field.icon,
+.textarea__field.icon,
+.select__field.icon {
+  position: relative;
+}
+.input__field.icon > input,
+.textarea__field.icon > input,
+.select__field.icon > input {
+  padding-right: 40px;
+}
+.input__field.icon > input:disabled,
+.textarea__field.icon > input:disabled,
+.select__field.icon > input:disabled {
+  background: white;
+}
+.input__field.icon figure,
+.textarea__field.icon figure,
+.select__field.icon figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 40px;
+  width: 30px;
+  top: 23px;
+  left: calc(100% - 30px);
+}
+.input__field.icon img,
+.textarea__field.icon img,
+.select__field.icon img {
+  width: 11px;
+  height: auto;
+}
+.input__field.error .error__mensage,
+.textarea__field.error .error__mensage,
+.select__field.error .error__mensage {
+  visibility: visible;
+}
+.input__field .select__field-list,
+.textarea__field .select__field-list,
+.select__field .select__field-list {
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  padding: 0;
+  top: 62px;
+  border: 1px solid #000000;
+  border-top: 1px solid white;
+  background: white;
+  z-index: 10;
+}
+.input__field .select__field-list li,
+.textarea__field .select__field-list li,
+.select__field .select__field-list li {
+  padding: 7px 0px 7px 22px;
+  list-style: none;
+  font-family: "HDI Pro Book";
+  font-size: 0.875rem;
+  color: black;
+  border-bottom: 1px solid rgb(248, 248, 248);
+}
+.input__field > input,
+.input__field textarea,
+.textarea__field > input,
+.textarea__field textarea,
+.select__field > input,
+.select__field textarea {
+  padding: 0.625rem 1.375rem;
+  font-family: "HDI Pro Book";
+  font-size: 0.875rem;
+  color: black;
+  border: 1px solid #000000;
+}
+.input__field > input::-moz-placeholder, .input__field textarea::-moz-placeholder, .textarea__field > input::-moz-placeholder, .textarea__field textarea::-moz-placeholder, .select__field > input::-moz-placeholder, .select__field textarea::-moz-placeholder {
+  font-family: "HDI Pro Book";
+  font-size: 0.875rem;
+  color: #9d9d9c;
+}
+.input__field > input::placeholder,
+.input__field textarea::placeholder,
+.textarea__field > input::placeholder,
+.textarea__field textarea::placeholder,
+.select__field > input::placeholder,
+.select__field textarea::placeholder {
+  font-family: "HDI Pro Book";
+  font-size: 0.875rem;
+  color: #9d9d9c;
+}
+.input__field > label,
+.textarea__field > label,
+.select__field > label {
+  margin-left: 1.375rem;
+  font-family: "HDI Pro Book";
+  font-size: 0.75rem;
+  color: black;
+}
+.input__field .error__mensage,
+.input__field small,
+.textarea__field .error__mensage,
+.textarea__field small,
+.select__field .error__mensage,
+.select__field small {
+  margin-left: 1.375rem;
+  font-family: "HDI Pro Book";
+  font-size: 0.625rem;
+  color: #e30613;
+  visibility: hidden;
+}
+.input__field small,
+.textarea__field small,
+.select__field small {
+  visibility: visible;
+  color: #9d9d9c;
+}
+
+.select__field.isActive .select__field-list {
+  visibility: visible;
+}
+.select__field.isSelected .select__field-item {
+  font-family: "HDI Pro Book";
+  font-size: 0.875rem;
+  color: #000000;
+}/*# sourceMappingURL=style.css.map */

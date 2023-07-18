@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>admin</title>
+  </head>
+  <body>
+    <div class="menu">
+      <header>
+        <div class="container">
+          <div class="header__content">
+            <figure>
+              <a href=""><img src="./assets/img/header/logo.svg" alt="" /></a>
+            </figure>
+
+            <button>Logout</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="menu__wrapper">
+        <aside class="menu__itens">
+          <ul class="menu__list">
+            <li class="menu__item">
+              Home
+              <span></span>
+              <ul class="sub__menu">
+                <li class="sub__link"><a href="">Header</a></li>
+                <li class="sub__link"><a href="">Atalhos</a></li>
+                <li class="sub__link"><a href="">Destaques</a></li>
+              </ul>
+            </li>
+            <li class="menu__item">
+              Produtos <span></span>
+              <ul class="sub__menu">
+                <li class="sub__link"><a href="">Categorias</a></li>
+                <li class="sub__link"><a href="">Produtos</a></li>
+                <li class="sub__link"><a href="">Por que escolher HDI</a></li>
+              </ul>
+            </li>
+            <li class="menu__item">
+              Acessos <span></span>
+              <ul class="sub__menu">
+                <li class="sub__link"><a href="">Header</a></li>
+                <li class="sub__link"><a href="">Destaques</a></li>
+              </ul>
+            </li>
+            <li class="menu__item">Grupo HDI <span></span></li>
+            <li class="menu__item">
+              Contato <span></span>
+              <ul class="sub__menu">
+                <li class="sub__link"><a href="">Contatos úteis</a></li>
+                <li class="sub__link"><a href="">Imprensa</a></li>
+                <li class="sub__link"><a href="">Trabalhe Conosco</a></li>
+                <li class="sub__link"><a href="">Fale Conosco</a></li>
+              </ul>
+            </li>
+            <li class="menu__item"><a href="">Usuários</a></li>
+            <li class="menu__item"><a href="">Paginas avulsas</a></li>
+          </ul>
+        </aside>
+
+        <div class="content">
+          <div class="input__field">
+            <label for="">Usuário</label>
+            <input type="text" placeholder="Digite o usuario" />
+            <span class="error__mensage">Mensagem de erro</span>
+          </div>
+
+          <div class="select__field icon">
+            <label for="">Botão / Call to action</label>
+            <div class="select__field-item">Selecione</div>
+            <figure>
+              <img src="./assets/img/arrowup-icon.svg" alt="" />
+            </figure>
+
+            <ul class="select__field-list">
+              <li>Saiba mais</li>
+              <li>Veja mais</li>
+              <li>Confira já</li>
+            </ul>
+            <span class="error__mensage">Mensagem de erro</span>
+          </div>
+
+          <div class="textarea__field">
+            <label for="">Alt de Imagem</label>
+            <textarea
+              cols="30"
+              rows="5"
+              placeholder="Digite o texto de alt da imagem"
+            ></textarea>
+            <small>0/100</small>
+            <span class="error__mensage">Mensagem de erro</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>
