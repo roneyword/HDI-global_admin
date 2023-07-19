@@ -495,6 +495,7 @@ input[type=file] {
   color: #ffffff;
   transition: all 0.2s;
   text-transform: capitalize;
+  text-decoration: none;
   cursor: pointer;
 }
 .btn.green-primary {
@@ -513,6 +514,71 @@ input[type=file] {
   background-color: #ffffff;
   border: 1px solid #000000;
   color: #000000;
+}
+.btn.edit {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  color: #006b2d;
+  padding: 0;
+  padding-left: 15px;
+  font-family: "HDI Pro Book";
+}
+.btn.edit::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 0;
+  top: 60%;
+  transform: translate(0, -50%);
+  background-image: url("/src/assets/img/edit-icon.svg");
+  background-position: center;
+  background-size: 100%;
+}
+.btn.delete {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  padding: 0;
+  padding-left: 11px;
+  font-family: "HDI Pro Book";
+}
+.btn.delete::before {
+  content: "";
+  width: 9px;
+  height: 12px;
+  position: absolute;
+  left: 0;
+  top: 60%;
+  transform: translate(0, -50%);
+  background-image: url("/src/assets/img/delete-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.btn.logout {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  color: #6eab28;
+  padding: 0;
+  padding-left: 16px;
+  font-family: "HDI Pro Bold";
+}
+.btn.logout::before {
+  content: "";
+  width: 13px;
+  height: 12px;
+  position: absolute;
+  left: 0;
+  top: 60%;
+  transform: translate(0, -50%);
+  background-image: url("/src/assets/img/logout-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .btn:disabled {
   background-color: #9d9d9c;
