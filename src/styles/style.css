@@ -372,7 +372,8 @@ button {
 }
 .file__field .label {
   font-family: "HDI Pro Book";
-  margin-left: 0.75rem;
+  margin-left: 1.375rem;
+  font-size: 0.75rem;
   padding-bottom: 0.4375rem;
   display: block;
   color: #000000;

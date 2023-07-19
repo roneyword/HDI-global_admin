@@ -2,7 +2,8 @@
     width: 100%;
     .label {
         font-family: "HDI Pro Book";
-        margin-left: pxtorem(12);
+        margin-left: pxtorem(22);
+        font-size: pxtorem(12);
         padding-bottom: pxtorem(7);
         display: block;
         color: $black;
