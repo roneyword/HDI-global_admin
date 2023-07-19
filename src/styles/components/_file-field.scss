@@ -17,7 +17,7 @@
             min-width: pxtorem(340);
             min-height: pxtorem(150);
             border: 1px solid $black;
-            color: $grey-700;
+            color: $gray-600;
             font-family: "HDI Pro Book";
             font-size: pxtorem(14);
             display: flex;
@@ -57,7 +57,7 @@
         display: none;
         width: 100%;
         height: 52px;
-        border: 1px solid $grey-700;
+        border: 1px solid $gray-700;
         align-items: center;
         figure {
             max-width: pxtorem(70);
@@ -118,7 +118,7 @@ input[type="file"] {
     display: block;
     font-family: "HDI Pro Book";
     font-size: pxtorem(12);
-    color: $grey-700;
+    color: $gray-600;
     &.error {
         color: $red;
     }
