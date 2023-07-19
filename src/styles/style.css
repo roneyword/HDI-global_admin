@@ -517,4 +517,86 @@ input[type=file] {
 }
 .btn:disabled:hover {
   background-color: #9d9d9c;
+}
+
+.table__list {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table__list thead {
+  border-bottom: 1px solid #000000;
+}
+.table__list thead tr {
+  text-align: left;
+}
+.table__list thead tr th {
+  padding-bottom: 6px;
+  font-family: "HDI Pro Book";
+  font-size: 0.75rem;
+  color: #000000;
+  text-transform: uppercase;
+}
+.table__list thead tr th.text__end {
+  text-align: right;
+}
+.table__list tbody tr td {
+  padding-top: 1.875rem;
+  font-family: "HDI Pro Book";
+  font-size: 0.875rem;
+  color: #000000;
+}
+.table__list tbody tr td.text__end {
+  text-align: right;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 15px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #c1dea0;
+  transition: 0.4s;
+}
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  left: 0px;
+  bottom: -2px;
+  background-color: green;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #c6c6c6;
+}
+input:checked + .slider::before {
+  background-color: #706f6f;
+}
+
+input:checked + .slider:before {
+  transform: translateX(13px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }/*# sourceMappingURL=style.css.map */

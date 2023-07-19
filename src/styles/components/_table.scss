@@ -1,0 +1,39 @@
+.table__list {
+  width: 100%;
+  border-collapse: collapse;
+
+  thead {
+    border-bottom: 1px solid #000000;
+
+    tr {
+      text-align: left;
+
+      th {
+        padding-bottom: 6px;
+        font-family: "HDI Pro Book";
+        font-size: pxtorem(12);
+        color: #000000;
+        text-transform: uppercase;
+
+        &.text__end {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        padding-top: pxtorem(30);
+        font-family: "HDI Pro Book";
+        font-size: pxtorem(14);
+        color: #000000;
+
+        &.text__end {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
