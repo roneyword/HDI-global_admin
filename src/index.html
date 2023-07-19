@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <title>admin</title>
   </head>
+
   <body>
     <div class="menu">
       <header>
@@ -106,12 +107,38 @@
             <small>0/100</small>
             <span class="error__mensage">Mensagem de erro</span>
           </div>
+
+          <div class="file__field" data-resolution="1920x1200" data-sizeimg="1">
+            <label class="label">Imagem Desktop e Tablet (1920x1200px)*</label>
+            <div class="container_file__field">
+              <label class="file">
+                <span class="icon"></span>
+                <span class="text">Arraste e solte ou selecione arquivos.</span>
+              </label>
+              <input type="file" accept="image/png, image/jpeg" />
+            </div>
+            <div class="container-input-img-selected">
+              <figure>
+                <img id="image_preview" />
+              </figure>
+              <p class="name-img"></p>
+              <div class="container-btn-cancel">
+                <button>
+                  <img src="assets/img/fields/icon-cancel.svg" alt="" />
+                </button>
+              </div>
+            </div>
+            <p class="descrption">
+              São permitidos arquivos
+              <span> PNG, JPEG </span>
+              <span> até 1MB.</span>
+            </p>
+            <span id="file-message-error" class="descrption error"></span>
+          </div>
         </div>
       </div>
     </div>
 
     <script type="module" src="js/index.js"></script>
-
-    <script></script>
   </body>
 </html>

@@ -366,4 +366,119 @@ button {
   to {
     opacity: 1;
   }
+}
+.file__field {
+  width: 100%;
+}
+.file__field .label {
+  font-family: "HDI Pro Book";
+  margin-left: 0.75rem;
+  padding-bottom: 0.4375rem;
+  display: block;
+  color: #000000;
+}
+.file__field .container_file__field {
+  position: relative;
+}
+.file__field .container_file__field .file {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 150px;
+  min-width: 21.25rem;
+  min-height: 9.375rem;
+  border: 1px solid #000000;
+  color: #9d9d9c;
+  font-family: "HDI Pro Book";
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 0.3s;
+  margin-bottom: 8px;
+}
+.file__field .container_file__field .file .icon {
+  display: block;
+  background-image: url("/src/assets/img/fields/arrow-up-file-gray.svg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 17px;
+  height: 18px;
+  transition: 0.3s;
+}
+.file__field:hover .container_file__field .file {
+  border: 1px solid rgba(110, 171, 40, 0.3019607843);
+  color: #006b2d;
+}
+.file__field:hover .container_file__field .file .icon {
+  display: block;
+  background-image: url("/src/assets/img/fields/arrow-up-file-green.svg");
+  transform: translateY(-5px);
+}
+.file__field .container-input-img-selected {
+  display: none;
+  width: 100%;
+  height: 52px;
+  border: 1px solid #706f6f;
+  align-items: center;
+}
+.file__field .container-input-img-selected figure {
+  max-width: 4.375rem;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.file__field .container-input-img-selected figure img {
+  width: auto;
+  height: 100%;
+}
+.file__field .container-input-img-selected .name-img {
+  margin-left: 18px;
+  display: block;
+  font-family: "HDI Pro Book";
+  font-size: 0.875rem;
+  color: #000000;
+  flex: auto;
+  overflow: hidden;
+}
+.file__field .container-input-img-selected .container-btn-cancel {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.file__field .container-input-img-selected .container-btn-cancel button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.file__field.img-selected .container_file__field {
+  display: none;
+}
+.file__field.img-selected .container-input-img-selected {
+  display: flex;
+}
+
+input[type=file] {
+  position: absolute;
+  top: 0;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.descrption {
+  margin: 1px auto;
+  display: block;
+  font-family: "HDI Pro Book";
+  font-size: 0.75rem;
+  color: #9d9d9c;
+}
+.descrption.error {
+  color: #e30613;
 }/*# sourceMappingURL=style.css.map */
