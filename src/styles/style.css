@@ -453,4 +453,40 @@ input[type=file] {
 }
 .descrption.error {
   color: #e30613;
+}
+
+.container-btn {
+  margin: 20px 0;
+}
+
+.btn {
+  padding: 8px 33px;
+  font-size: 0.875rem;
+  font-family: "HDI Pro Bold";
+  border: 1px solid transparent;
+  color: #ffffff;
+  transition: all 0.2s;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.btn.green {
+  background-color: #6eab28;
+}
+.btn.green:hover {
+  background-color: #006b2d;
+}
+.btn.red {
+  background-color: #e30613;
+}
+.btn.white {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  color: #000000;
+}
+.btn:disabled {
+  background-color: #9d9d9c;
+  cursor: default;
+}
+.btn:disabled:hover {
+  background-color: #9d9d9c;
 }/*# sourceMappingURL=style.css.map */
