@@ -497,10 +497,13 @@ input[type=file] {
   text-transform: capitalize;
   cursor: pointer;
 }
-.btn.green {
+.btn.green-primary {
   background-color: #6eab28;
 }
-.btn.green:hover {
+.btn.green-primary:hover {
+  background-color: #006b2d;
+}
+.btn.green-secondary {
   background-color: #006b2d;
 }
 .btn.red {

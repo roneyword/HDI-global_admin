@@ -12,11 +12,15 @@
     text-transform: capitalize;
     cursor: pointer;
 
-    &.green {
+    &.green-primary {
         background-color: $green-800;
         &:hover {
             background-color: $green-900;
         }
+    }
+
+    &.green-secondary {
+        background-color: $green-900;
     }
 
     &.red {
