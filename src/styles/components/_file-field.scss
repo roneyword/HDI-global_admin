@@ -1,0 +1,125 @@
+.file__field {
+    width: 100%;
+    .label {
+        font-family: "HDI Pro Book";
+        margin-left: pxtorem(12);
+        padding-bottom: pxtorem(7);
+        display: block;
+        color: $black;
+    }
+    .container_file__field {
+        position: relative;
+        .file {
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            height: 150px;
+            min-width: pxtorem(340);
+            min-height: pxtorem(150);
+            border: 1px solid $black;
+            color: $grey-700;
+            font-family: "HDI Pro Book";
+            font-size: pxtorem(14);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transition: 0.3s;
+            margin-bottom: 8px;
+            .icon {
+                display: block;
+                background-image: url("/src/assets/img/fields/arrow-up-file-gray.svg");
+                background-size: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 17px;
+                height: 18px;
+                transition: 0.3s;
+            }
+        }
+    }
+
+    &:hover {
+        .container_file__field {
+            .file {
+                border: 1px solid #6eab284d;
+                color: #006b2d;
+                .icon {
+                    display: block;
+                    background-image: url("/src/assets/img/fields/arrow-up-file-green.svg");
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+
+    .container-input-img-selected {
+        display: none;
+        width: 100%;
+        height: 52px;
+        border: 1px solid $grey-700;
+        align-items: center;
+        figure {
+            max-width: pxtorem(70);
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            img {
+                width: auto;
+                height: 100%;
+            }
+        }
+        .name-img {
+            margin-left: 18px;
+            display: block;
+            font-family: "HDI Pro Book";
+            font-size: pxtorem(14);
+            color: $black;
+            flex: auto;
+            overflow: hidden;
+        }
+        .container-btn-cancel {
+            width: 40px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            button {
+                border: none;
+                background: transparent;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &.img-selected {
+        .container_file__field {
+            display: none;
+        }
+        .container-input-img-selected {
+            display: flex;
+        }
+    }
+}
+
+input[type="file"] {
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.descrption {
+    margin: 1px auto;
+    display: block;
+    font-family: "HDI Pro Book";
+    font-size: pxtorem(12);
+    color: $grey-700;
+    &.error {
+        color: $red;
+    }
+}
