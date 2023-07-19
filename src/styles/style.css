@@ -200,6 +200,7 @@ button {
 .input__field,
 .textarea__field,
 .select__field {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.4375rem;
@@ -225,14 +226,12 @@ button {
 .select__field.icon > input {
   padding-right: 40px;
 }
-.input__field.icon > input:disabled,
-.textarea__field.icon > input:disabled,
-.select__field.icon > input:disabled {
-  background: white;
-}
 .input__field.icon figure,
+.input__field.icon button,
 .textarea__field.icon figure,
-.select__field.icon figure {
+.textarea__field.icon button,
+.select__field.icon figure,
+.select__field.icon button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -241,6 +240,8 @@ button {
   width: 30px;
   top: 23px;
   left: calc(100% - 30px);
+  background: none;
+  border: none;
 }
 .input__field.icon img,
 .textarea__field.icon img,
@@ -339,6 +340,33 @@ button {
   color: #000000;
 }
 
+.tooltip {
+  display: none;
+  position: absolute;
+  top: calc(-100% + 10px);
+  width: 100px;
+  padding: 10px;
+  font-family: "HDI Pro Book";
+  font-size: 0.75rem;
+  color: #6eab28;
+  border: 1px solid #c1dea0;
+  border-radius: 15px;
+  background: white;
+  z-index: 50;
+}
+.tooltip.isActive {
+  display: inline-block;
+  animation: fadeIn 0.2s linear;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .file__field {
   width: 100%;
 }

@@ -1,0 +1,29 @@
+.tooltip {
+  display: none;
+  position: absolute;
+  top: calc(-100% + 10px);
+  width: 100px;
+  padding: 10px;
+  font-family: "HDI Pro Book";
+  font-size: pxtorem(12);
+  color: #6eab28;
+  border: 1px solid #c1dea0;
+  border-radius: 15px;
+  background: white;
+  z-index: 50;
+
+  &.isActive {
+    display: inline-block;
+    animation: fadeIn 0.2s linear;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
