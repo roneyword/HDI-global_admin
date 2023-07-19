@@ -188,6 +188,22 @@ button {
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.0588235294);
   border-radius: 5px;
 }
+.menu .menu__wrapper .content .content-title {
+  margin-bottom: 2.5rem;
+}
+.menu .menu__wrapper .content .content-title > h1 {
+  font-family: "HDI Pro Book";
+  font-size: 2.5rem;
+  color: #000000;
+}
+.menu .menu__wrapper .content .content-title > h1 span {
+  font-family: "HDI Pro Bold";
+}
+.menu .menu__wrapper .content .content-title > h2 {
+  font-family: "HDI Pro Bold";
+  font-size: 1.5rem;
+  color: #6eab28;
+}
 
 @keyframes slideDown {
   from {
@@ -495,12 +511,16 @@ input[type=file] {
   color: #ffffff;
   transition: all 0.2s;
   text-transform: capitalize;
+  text-decoration: none;
   cursor: pointer;
 }
-.btn.green {
+.btn.green-primary {
   background-color: #6eab28;
 }
-.btn.green:hover {
+.btn.green-primary:hover {
+  background-color: #006b2d;
+}
+.btn.green-secondary {
   background-color: #006b2d;
 }
 .btn.red {
@@ -510,6 +530,71 @@ input[type=file] {
   background-color: #ffffff;
   border: 1px solid #000000;
   color: #000000;
+}
+.btn.edit {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  color: #006b2d;
+  padding: 0;
+  padding-left: 15px;
+  font-family: "HDI Pro Book";
+}
+.btn.edit::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 0;
+  top: 60%;
+  transform: translate(0, -50%);
+  background-image: url("/src/assets/img/edit-icon.svg");
+  background-position: center;
+  background-size: 100%;
+}
+.btn.delete {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  padding: 0;
+  padding-left: 11px;
+  font-family: "HDI Pro Book";
+}
+.btn.delete::before {
+  content: "";
+  width: 9px;
+  height: 12px;
+  position: absolute;
+  left: 0;
+  top: 60%;
+  transform: translate(0, -50%);
+  background-image: url("/src/assets/img/delete-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.btn.logout {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  color: #6eab28;
+  padding: 0;
+  padding-left: 16px;
+  font-family: "HDI Pro Bold";
+}
+.btn.logout::before {
+  content: "";
+  width: 13px;
+  height: 12px;
+  position: absolute;
+  left: 0;
+  top: 60%;
+  transform: translate(0, -50%);
+  background-image: url("/src/assets/img/logout-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .btn:disabled {
   background-color: #9d9d9c;
@@ -530,6 +615,7 @@ input[type=file] {
   text-align: left;
 }
 .table__list thead tr th {
+  display: inline-block;
   padding-bottom: 6px;
   font-family: "HDI Pro Book";
   font-size: 0.75rem;
@@ -539,14 +625,44 @@ input[type=file] {
 .table__list thead tr th.text__end {
   text-align: right;
 }
+.table__list thead tr th.w15 {
+  width: 15%;
+}
+.table__list thead tr th.w25 {
+  width: 25%;
+}
+.table__list thead tr th.w50 {
+  width: 50%;
+}
+.table__list thead tr th.w100 {
+  width: 100%;
+}
 .table__list tbody tr td {
+  display: inline-block;
   padding-top: 1.875rem;
   font-family: "HDI Pro Book";
   font-size: 0.875rem;
   color: #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.table__list tbody tr td.w15 {
+  max-width: 15%;
+}
+.table__list tbody tr td.w25 {
+  width: 25%;
+}
+.table__list tbody tr td.w50 {
+  max-width: 50%;
+}
+.table__list tbody tr td.w100 {
+  width: 100%;
 }
 .table__list tbody tr td.text__end {
-  text-align: right;
+  display: inline-flex;
+  justify-content: flex-end;
+  gap: 1.125rem;
 }
 
 .switch {
@@ -599,4 +715,8 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.content-wrapper {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */

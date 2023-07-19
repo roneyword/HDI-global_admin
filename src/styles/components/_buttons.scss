@@ -10,13 +10,18 @@
     color: $white;
     transition: all 0.2s;
     text-transform: capitalize;
+    text-decoration: none;
     cursor: pointer;
 
-    &.green {
+    &.green-primary {
         background-color: $green-800;
         &:hover {
             background-color: $green-900;
         }
+    }
+
+    &.green-secondary {
+        background-color: $green-900;
     }
 
     &.red {
@@ -27,6 +32,77 @@
         background-color: $white;
         border: 1px solid $black;
         color: $black;
+    }
+
+    &.edit {
+        position: relative;
+        background-color: transparent;
+        border: none;
+        color: $green-900;
+        padding: 0;
+        padding-left: 15px;
+        font-family: "HDI Pro Book";
+
+        &::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            left: 0;
+            top: 60%;
+            transform: translate(0, -50%);
+            background-image: url("/src/assets/img/edit-icon.svg");
+            background-position: center;
+            background-size: 100%;
+        }
+    }
+
+    &.delete {
+        position: relative;
+        background-color: transparent;
+        border: none;
+        color: $black;
+        padding: 0;
+        padding-left: 11px;
+        font-family: "HDI Pro Book";
+
+        &::before {
+            content: "";
+            width: 9px;
+            height: 12px;
+            position: absolute;
+            left: 0;
+            top: 60%;
+            transform: translate(0, -50%);
+            background-image: url("/src/assets/img/delete-icon.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    }
+    
+    &.logout {
+        position: relative;
+        background-color: transparent;
+        border: none;
+        color: $green-800;
+        padding: 0;
+        padding-left: 16px;
+        font-family: "HDI Pro Bold";
+
+        &::before {
+            content: "";
+            width: 13px;
+            height: 12px;
+            position: absolute;
+            left: 0;
+            top: 60%;
+            transform: translate(0, -50%);
+            background-image: url("/src/assets/img/logout-icon.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
     }
 
     &:disabled {
