@@ -8,3 +8,4 @@ Menu();
 Select();
 TextArea();
 File();
+CopyPaste();
