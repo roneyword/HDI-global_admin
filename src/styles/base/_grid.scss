@@ -6,6 +6,21 @@
   margin: 0 auto;
 }
 
+.col {
+  &.w25 {
+    width: 25%;
+  }
+  &.w50 {
+    width: 50%;
+  }
+  &.w75 {
+    width: 75%;
+  }
+  &.w100 {
+    width: 100%;
+  }
+}
+
 .pd-20 {
   display: flex;
   flex-wrap: wrap;

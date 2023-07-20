@@ -34,6 +34,19 @@ button {
   margin: 0 auto;
 }
 
+.col.w25 {
+  width: 25%;
+}
+.col.w50 {
+  width: 50%;
+}
+.col.w75 {
+  width: 75%;
+}
+.col.w100 {
+  width: 100%;
+}
+
 .pd-20 {
   display: flex;
   flex-wrap: wrap;
@@ -181,12 +194,15 @@ button {
   color: #000000;
 }
 .menu .menu__wrapper .content {
-  width: 100%;
+  max-height: 725px;
+  width: calc(100% - 354px);
   margin: 3.75rem;
   padding: 3.125rem;
   background: white;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.0588235294);
   border-radius: 5px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .menu .menu__wrapper .content .content-title {
   margin-bottom: 2.5rem;
@@ -203,6 +219,22 @@ button {
   font-family: "HDI Pro Bold";
   font-size: 1.5rem;
   color: #6eab28;
+}
+.menu .menu__wrapper .content .content-language {
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid rgb(222, 221, 221);
+  padding-bottom: 5px;
+  margin-bottom: 55px;
+}
+.menu .menu__wrapper .content .content-language > button {
+  width: 37px;
+  height: 28px;
+  background: none;
+  opacity: 0.3;
+}
+.menu .menu__wrapper .content .content-language > button.isActive {
+  opacity: 1;
 }
 
 @keyframes slideDown {
@@ -388,7 +420,8 @@ button {
 }
 .file__field .label {
   font-family: "HDI Pro Book";
-  margin-left: 0.75rem;
+  margin-left: 1.375rem;
+  font-size: 0.75rem;
   padding-bottom: 0.4375rem;
   display: block;
   color: #000000;
@@ -401,7 +434,6 @@ button {
   display: block;
   width: 100%;
   height: 150px;
-  min-width: 21.25rem;
   min-height: 9.375rem;
   border: 1px solid #000000;
   color: #9d9d9c;
@@ -717,6 +749,71 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+.modal-container.isActive {
+  display: flex;
+}
+.modal-container .modal {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 455px;
+  height: auto;
+  padding: 2.5rem 1.875rem;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.0588235294);
+}
+.modal-container .modal .modal__content > h2 {
+  font-family: "HDI Pro Bold";
+  font-size: 1.5rem;
+  color: #000000;
+}
+.modal-container .modal .modal__content > p {
+  font-family: "HDI Pro Book";
+  font-size: 0.875rem;
+  color: #000000;
+}
+
 .content-wrapper {
   display: flex;
+  flex-wrap: wrap;
+  gap: 1.875rem 1.375rem;
+}
+.content-wrapper .external-link {
+  display: flex;
+  flex-direction: column;
+}
+.content-wrapper .external-link > span {
+  font-family: "HDI Pro Book";
+  font-size: 0.75rem;
+  color: black;
+  margin-bottom: 20px;
+}
+.content-wrapper .external-link .external-link__checkbox {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.content-wrapper .w25 {
+  width: calc(25% - 22px);
+}
+
+.content-footer {
+  margin-top: 2.625rem;
+  text-align: end;
 }/*# sourceMappingURL=style.css.map */
