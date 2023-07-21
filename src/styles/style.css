@@ -220,22 +220,6 @@ button {
   font-size: 1.5rem;
   color: #6eab28;
 }
-.menu .menu__wrapper .content .content-language {
-  display: flex;
-  gap: 10px;
-  border-bottom: 1px solid rgb(222, 221, 221);
-  padding-bottom: 5px;
-  margin-bottom: 55px;
-}
-.menu .menu__wrapper .content .content-language > button {
-  width: 37px;
-  height: 28px;
-  background: none;
-  opacity: 0.3;
-}
-.menu .menu__wrapper .content .content-language > button.isActive {
-  opacity: 1;
-}
 
 @keyframes slideDown {
   from {
@@ -252,7 +236,6 @@ button {
   display: flex;
   flex-direction: column;
   gap: 0.4375rem;
-  cursor: pointer;
 }
 .input__field .select__field-item,
 .textarea__field .select__field-item,
@@ -379,6 +362,9 @@ button {
   color: #9d9d9c;
 }
 
+.select__field {
+  cursor: pointer;
+}
 .select__field.isActive .select__field-list {
   visibility: visible;
 }
@@ -716,7 +702,7 @@ input[type=file] {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #c1dea0;
+  background-color: #c6c6c6;
   transition: 0.4s;
 }
 .slider::before {
@@ -726,15 +712,15 @@ input[type=file] {
   width: 19px;
   left: 0px;
   bottom: -2px;
-  background-color: green;
+  background-color: #706f6f;
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: #c6c6c6;
+  background-color: #c1dea0;
 }
 input:checked + .slider::before {
-  background-color: #706f6f;
+  background-color: green;
 }
 
 input:checked + .slider:before {
@@ -787,6 +773,24 @@ input:checked + .slider:before {
   font-family: "HDI Pro Book";
   font-size: 0.875rem;
   color: #000000;
+}
+
+.content-language {
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid rgb(222, 221, 221);
+  padding-bottom: 5px;
+  margin-bottom: 55px;
+}
+.content-language > button {
+  width: 37px;
+  height: 28px;
+  border: none;
+  background: none;
+  opacity: 0.3;
+}
+.content-language > button.isActive {
+  opacity: 1;
 }
 
 .content-wrapper {

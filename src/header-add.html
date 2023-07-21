@@ -71,20 +71,18 @@
           </div>
 
           <div class="content-language">
-            <button class="isActive">
-              brasil
-              <!-- <img src="" alt="" /> -->
+            <button class="isActive" data-language="br">
+              <img src="./assets/img/flag-br-icon.svg" alt="" />
             </button>
 
-            <button>
-              EUA
-              <!-- <img src="" alt="" /> -->
+            <button data-language="eua">
+              <img src="./assets/img/flag-eua-icon.svg" alt="" />
             </button>
           </div>
 
           <div class="content-wrapper">
             <div class="col w25">
-              <div class="textarea__field">
+              <div class="textarea__field" data-js="title">
                 <label>Titulo*</label>
                 <textarea
                   cols="30"
@@ -98,7 +96,7 @@
             </div>
 
             <div class="col w25">
-              <div class="textarea__field">
+              <div class="textarea__field" data-js="text">
                 <label for="">Texto*</label>
                 <textarea
                   cols="30"
@@ -114,12 +112,11 @@
             <div class="col w25">
               <div
                 class="file__field"
-                data-resolution="1920x1200"
+                data-resolution="24x15"
                 data-sizeimg="1"
+                data-js="imgDesk"
               >
-                <label class="label"
-                  >Imagem Desktop e Tablet (1920x1200px)*</label
-                >
+                <label class="label">Imagem Desktop e Tablet (24x15px)*</label>
                 <div class="container_file__field">
                   <label class="file">
                     <span class="icon"></span>
@@ -154,6 +151,7 @@
                 class="file__field"
                 data-resolution="1920x1200"
                 data-sizeimg="1"
+                data-js="imgMobile"
               >
                 <label class="label">Imagem Mobile (1920x1200px)*</label>
                 <div class="container_file__field">
@@ -186,7 +184,7 @@
             </div>
 
             <div class="col w25">
-              <div class="textarea__field">
+              <div class="textarea__field" data-js="altImg">
                 <label for="">Alt de imagem*</label>
                 <textarea
                   cols="30"
@@ -200,7 +198,7 @@
             </div>
 
             <div class="col w25">
-              <div class="select__field icon">
+              <div class="select__field icon" data-js="btnCallToAction">
                 <label for="">Botão / Call to action*</label>
                 <div class="select__field-item">Selecione</div>
                 <figure>
@@ -217,7 +215,7 @@
             </div>
 
             <div class="col w25">
-              <div class="input__field">
+              <div class="input__field" data-js="entryDate">
                 <label for="">Data de entrada*</label>
                 <input type="date" placeholder="DD/MM?AAAA" />
                 <span class="error__mensage">Mensagem de erro</span>
@@ -225,15 +223,15 @@
             </div>
 
             <div class="col w25">
-              <div class="input__field">
+              <div class="input__field" data-js="exitDate">
                 <label for="">Data de saida</label>
-                <input type="date" placeholder="DD/MM?AAAA" />
+                <input type="date" placeholder="DD/MM/AAAA" />
                 <span class="error__mensage">Mensagem de erro</span>
               </div>
             </div>
 
             <div class="col w25">
-              <div class="input__field icon" data-copy="link">
+              <div class="input__field icon" data-copy="link" data-js="link">
                 <label for="">Link*</label>
                 <input class="" type="text" placeholder="Digite o link" />
                 <button>
@@ -248,13 +246,14 @@
               <div class="external-link">
                 <span>É um link externo ?</span>
 
-                <div class="external-link__checkbox">
-                  <small>Sim</small>
+                <div class="external-link__checkbox" data-js="isExternal">
+                  <small>Não</small>
+
                   <label class="switch">
-                    <input type="checkbox" checked="false" />
+                    <input type="checkbox" />
                     <span class="slider round"></span>
                   </label>
-                  <small>Não</small>
+                  <small>Sim</small>
                 </div>
               </div>
             </div>
@@ -268,5 +267,6 @@
     </div>
 
     <script type="module" src="js/index.js"></script>
+    <script type="module" src="js/header-add.js"></script>
   </body>
 </html>
