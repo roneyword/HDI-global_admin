@@ -5,7 +5,6 @@ const isActiveLanguage = () => {
     buttonLanguage.forEach((language) => {
       language.addEventListener("click", () => {
         onDesactiveLaguage();
-        console.log(language.dataset.language);
         language.classList.add("isActive");
       });
     });
@@ -19,49 +18,60 @@ const isActiveLanguage = () => {
 
   handleActiveLanguage();
 };
+
 isActiveLanguage();
 
-// teste de inputs
+// validação dos inputs
 let valuesInput = {
   title: {
     value: "",
     error: true,
+    referenceError: "",
   },
   text: {
     value: "",
     error: true,
+    referenceError: "",
   },
   imgDesk: {
     value: "",
     error: true,
+    referenceError: "",
   },
   imgMobile: {
     value: "",
     error: true,
+    referenceError: "",
   },
   altImg: {
     value: "",
     error: true,
+    referenceError: "",
   },
   btnCallToAction: {
     value: "",
     error: true,
+    referenceError: "",
   },
   entryDate: {
     value: "",
     error: true,
+    referenceError: "",
   },
   exitDate: {
     value: "",
     error: true,
+    referenceError: "",
   },
   link: {
     value: "",
     error: true,
+    referenceError: "",
   },
   isExternal: {
     value: "",
-    error: true,
+    error: false,
+    referenceError: "",
   },
 };
 
@@ -273,12 +283,18 @@ const validateFile = (fieldFile, obj) => {
   handleActiveFileField();
 };
 
+const onGetReference = (referecent) => {
+  valuesInput[referecent.dataset.js].referenceError = referecent;
+};
+
 const onValidationInputs = () => {
   const inputsValues = document.querySelectorAll("[data-js]");
 
   inputsValues.forEach((input) => {
+    onGetReference(input);
     input.dataset.js === "title" &&
       validateMinCaracter(input, "textarea", valuesInput, 10);
+
     input.dataset.js === "text" &&
       validateMinCaracter(input, "textarea", valuesInput, 10);
 
@@ -307,7 +323,6 @@ const handleSubmite = (obj) => {
   const btnSubmite = document.querySelector(".content-footer button");
 
   btnSubmite.addEventListener("click", () => {
-    console.log(obj);
     const hasErrorTrue = (obj) => {
       for (const key in obj) {
         if (obj.hasOwnProperty(key) && obj[key].error === true) {
@@ -317,6 +332,15 @@ const handleSubmite = (obj) => {
       return false;
     };
 
+    const showErroView = (obj) => {
+      for (const key in obj) {
+        if (obj.hasOwnProperty(key) && obj[key].error === true) {
+          obj[key].referenceError.classList.add("error");
+        }
+      }
+    };
+
+    showErroView(obj);
     if (hasErrorTrue(obj)) {
       // não pode validar
     } else {

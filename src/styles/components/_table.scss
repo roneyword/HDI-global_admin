@@ -9,8 +9,10 @@
       text-align: left;
 
       th {
+        // display: flex;
         display: inline-block;
         padding-bottom: 6px;
+        margin-left: 10px;
         font-family: "HDI Pro Book";
         font-size: pxtorem(12);
         color: #000000;
@@ -21,16 +23,27 @@
         }
 
         &.w15 {
-          width: 15%;
+          width: calc(15% - 10px);
         }
+
+        &.w20 {
+          width: calc(20% - 10px);
+        }
+
         &.w25 {
-          width: 25%;
+          width: calc(25% - 10px);
         }
+
         &.w50 {
-          width: 50%;
+          width: calc(50% - 10px);
         }
+
         &.w100 {
-          width: 100%;
+          width: calc(100% - 10px);
+        }
+
+        &.flex1 {
+          flex: 1;
         }
       }
     }
@@ -40,6 +53,7 @@
     tr {
       td {
         display: inline-block;
+        margin-left: 10px;
         padding-top: pxtorem(30);
         font-family: "HDI Pro Book";
         font-size: pxtorem(14);
@@ -50,13 +64,16 @@
         white-space: nowrap;
 
         &.w15 {
-          max-width: 15%;
+          width: calc(15% - 10px);
+        }
+        &.w20 {
+          width: calc(20% - 10px);
         }
         &.w25 {
-          width: 25%;
+          width: calc(25% - 10px);
         }
         &.w50 {
-          max-width: 50%;
+          width: calc(50% - 10px);
         }
         &.w100 {
           width: 100%;
@@ -66,6 +83,24 @@
           display: inline-flex;
           justify-content: flex-end;
           gap: pxtorem(18);
+        }
+
+        & > figure {
+          width: 114px;
+          height: auto;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        & > button {
+          background: none;
+          border: none;
+          img {
+            width: 100%;
+            height: auto;
+          }
         }
       }
     }

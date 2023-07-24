@@ -143,6 +143,42 @@
           color: #6eab28;
         }
       }
+
+      .content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: pxtorem(30) pxtorem(22);
+
+        min-height: 410px;
+
+        .content-footer {
+          width: 100%;
+          text-align: end;
+          align-self: flex-end;
+        }
+
+        .external-link {
+          display: flex;
+          flex-direction: column;
+
+          & > span {
+            font-family: "HDI Pro Book";
+            font-size: 0.75rem;
+            color: black;
+            margin-bottom: 20px;
+          }
+
+          .external-link__checkbox {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+          }
+        }
+
+        .w25 {
+          width: calc(25% - 22px);
+        }
+      }
     }
   }
 }

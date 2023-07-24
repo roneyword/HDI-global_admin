@@ -37,6 +37,9 @@ button {
 .col.w25 {
   width: 25%;
 }
+.col.w30 {
+  width: 30%;
+}
 .col.w50 {
   width: 50%;
 }
@@ -219,6 +222,35 @@ button {
   font-family: "HDI Pro Bold";
   font-size: 1.5rem;
   color: #6eab28;
+}
+.menu .menu__wrapper .content .content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.875rem 1.375rem;
+  min-height: 410px;
+}
+.menu .menu__wrapper .content .content-wrapper .content-footer {
+  width: 100%;
+  text-align: end;
+  align-self: flex-end;
+}
+.menu .menu__wrapper .content .content-wrapper .external-link {
+  display: flex;
+  flex-direction: column;
+}
+.menu .menu__wrapper .content .content-wrapper .external-link > span {
+  font-family: "HDI Pro Book";
+  font-size: 0.75rem;
+  color: black;
+  margin-bottom: 20px;
+}
+.menu .menu__wrapper .content .content-wrapper .external-link .external-link__checkbox {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.menu .menu__wrapper .content .content-wrapper .w25 {
+  width: calc(25% - 22px);
 }
 
 @keyframes slideDown {
@@ -635,6 +667,7 @@ input[type=file] {
 .table__list thead tr th {
   display: inline-block;
   padding-bottom: 6px;
+  margin-left: 10px;
   font-family: "HDI Pro Book";
   font-size: 0.75rem;
   color: #000000;
@@ -644,19 +677,26 @@ input[type=file] {
   text-align: right;
 }
 .table__list thead tr th.w15 {
-  width: 15%;
+  width: calc(15% - 10px);
+}
+.table__list thead tr th.w20 {
+  width: calc(20% - 10px);
 }
 .table__list thead tr th.w25 {
-  width: 25%;
+  width: calc(25% - 10px);
 }
 .table__list thead tr th.w50 {
-  width: 50%;
+  width: calc(50% - 10px);
 }
 .table__list thead tr th.w100 {
-  width: 100%;
+  width: calc(100% - 10px);
+}
+.table__list thead tr th.flex1 {
+  flex: 1;
 }
 .table__list tbody tr td {
   display: inline-block;
+  margin-left: 10px;
   padding-top: 1.875rem;
   font-family: "HDI Pro Book";
   font-size: 0.875rem;
@@ -666,13 +706,16 @@ input[type=file] {
   white-space: nowrap;
 }
 .table__list tbody tr td.w15 {
-  max-width: 15%;
+  width: calc(15% - 10px);
+}
+.table__list tbody tr td.w20 {
+  width: calc(20% - 10px);
 }
 .table__list tbody tr td.w25 {
-  width: 25%;
+  width: calc(25% - 10px);
 }
 .table__list tbody tr td.w50 {
-  max-width: 50%;
+  width: calc(50% - 10px);
 }
 .table__list tbody tr td.w100 {
   width: 100%;
@@ -681,6 +724,22 @@ input[type=file] {
   display: inline-flex;
   justify-content: flex-end;
   gap: 1.125rem;
+}
+.table__list tbody tr td > figure {
+  width: 114px;
+  height: auto;
+}
+.table__list tbody tr td > figure img {
+  width: 100%;
+  height: auto;
+}
+.table__list tbody tr td > button {
+  background: none;
+  border: none;
+}
+.table__list tbody tr td > button img {
+  width: 100%;
+  height: auto;
 }
 
 .switch {
@@ -791,33 +850,4 @@ input:checked + .slider:before {
 }
 .content-language > button.isActive {
   opacity: 1;
-}
-
-.content-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.875rem 1.375rem;
-}
-.content-wrapper .external-link {
-  display: flex;
-  flex-direction: column;
-}
-.content-wrapper .external-link > span {
-  font-family: "HDI Pro Book";
-  font-size: 0.75rem;
-  color: black;
-  margin-bottom: 20px;
-}
-.content-wrapper .external-link .external-link__checkbox {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-.content-wrapper .w25 {
-  width: calc(25% - 22px);
-}
-
-.content-footer {
-  margin-top: 2.625rem;
-  text-align: end;
 }/*# sourceMappingURL=style.css.map */

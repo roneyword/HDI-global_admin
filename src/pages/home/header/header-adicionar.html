@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="../../../styles/style.css" />
     <title>home header add</title>
   </head>
 
@@ -14,7 +14,9 @@
         <div class="container">
           <div class="header__content">
             <figure>
-              <a href=""><img src="./assets/img/header/logo.svg" alt="" /></a>
+              <a href=""
+                ><img src="../../../assets/img/header/logo.svg" alt=""
+              /></a>
             </figure>
 
             <button>Logout</button>
@@ -72,11 +74,11 @@
 
           <div class="content-language">
             <button class="isActive" data-language="br">
-              <img src="./assets/img/flag-br-icon.svg" alt="" />
+              <img src="../../../assets/img/flag-br-icon.svg" alt="" />
             </button>
 
             <button data-language="eua">
-              <img src="./assets/img/flag-eua-icon.svg" alt="" />
+              <img src="../../../assets/img/flag-eua-icon.svg" alt="" />
             </button>
           </div>
 
@@ -202,7 +204,7 @@
                 <label for="">Botão / Call to action*</label>
                 <div class="select__field-item">Selecione</div>
                 <figure>
-                  <img src="./assets/img/arrowup-icon.svg" alt="" />
+                  <img src="../../../assets/img/arrowup-icon.svg" alt="" />
                 </figure>
 
                 <ul class="select__field-list">
@@ -235,7 +237,7 @@
                 <label for="">Link*</label>
                 <input class="" type="text" placeholder="Digite o link" />
                 <button>
-                  <img src="./assets/img/copypaste-icon.svg" alt="" />
+                  <img src="../../../assets/img/copypaste-icon.svg" alt="" />
                   <span class="tooltip">Link copiado</span>
                 </button>
                 <span class="error__mensage">Mensagem de erro</span>
@@ -257,16 +259,19 @@
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="content-footer">
-            <button class="btn green-primary">Salvar</button>
+            <div class="content-footer">
+              <button class="btn green-primary">Salvar</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <script type="module" src="js/index.js"></script>
-    <script type="module" src="js/header-add.js"></script>
+    <script src="../../../js/menu.js"></script>
+    <script src="../../../js/select.js"></script>
+    <script src="../../../js/copypaste.js"></script>
+    <script src="../../../js/textArea.js"></script>
+    <script src="../../../js/pages/home/home-header/header-add.js"></script>
   </body>
 </html>
