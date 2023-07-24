@@ -1,0 +1,53 @@
+.card-home-emphasis {
+  width: 100%;
+  font-family: "HDI Pro Book";
+  font-size: pxtorem(12);
+  margin-bottom: pxtorem(62);
+  
+  .card-title {
+    color: $green-800;
+  }
+
+  .card-line {
+    border: none;
+    background-color: $green-800;
+    width: 100%;
+    height: 1px;
+    margin: 6px 0 12px 0;
+  }
+
+  table {
+    width: 100%;
+    thead {
+      vertical-align: top;
+      height: pxtorem(34);
+      tr {
+        td {
+          width: 25%;
+          color: $gray-600;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          width: 25%;
+          font-size: pxtorem(14);
+          color: $black;
+
+          .figure-list {
+            width: 100%;
+            max-width: 114px;
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+          &.align-end {
+            text-align: end;
+          }
+        }
+      }
+    }
+  }
+}
