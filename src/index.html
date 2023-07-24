@@ -23,7 +23,6 @@
       </header>
 
       <div class="menu__wrapper">
-
         <aside class="menu__itens">
           <ul class="menu__list">
             <li class="menu__item">
@@ -65,24 +64,22 @@
           </ul>
         </aside>
 
-      <div class="content">
+        <div class="content">
+          <div class="input__field">
+            <label for="">Usuário</label>
+            <input type="text" placeholder="Digite o usuario" />
+            <span class="error__mensage">Mensagem de erro</span>
+          </div>
 
-        <div class="input__field">
-          <label for="">Usuário</label>
-          <input type="text"
-            placeholder="Digite o usuario" />
-          <span class="error__mensage">Mensagem de erro</span>
-        </div>
-
-        <div class="input__field icon" data-copy="link">
-          <label for="">Link</label>
-          <input class="" type="text" placeholder="Digite o link" />
-          <button>
-            <img src="./assets/img/copypaste-icon.svg" alt="" />
-            <span class="tooltip">Link copiado</span>
-          </button>
-          <span class="error__mensage">Mensagem de erro</span>
-        </div>
+          <div class="input__field icon" data-copy="link">
+            <label for="">Link</label>
+            <input class="" type="text" placeholder="Digite o link" />
+            <button>
+              <img src="./assets/img/copypaste-icon.svg" alt="" />
+              <span class="tooltip">Link copiado</span>
+            </button>
+            <span class="error__mensage">Mensagem de erro</span>
+          </div>
 
           <div class="select__field icon">
             <label for="">Botão / Call to action</label>
@@ -111,74 +108,135 @@
             <span class="error__mensage">Mensagem de erro</span>
           </div>
 
-
-        <div class="file__field"
-          data-resolution="1920x1200"
-          data-sizeimg="1">
-          <label class="label">Imagem Desktop e Tablet (1920x1200px)*</label>
-          <div class="container_file__field">
-            <label class="file">
-              <span class="icon"></span>
-              <span class="text">Arraste e solte ou selecione arquivos.</span>
-            </label>
-            <input type="file"
-              accept="image/png, image/jpeg" />
+          <div class="file__field" data-resolution="1920x1200" data-sizeimg="1">
+            <label class="label">Imagem Desktop e Tablet (1920x1200px)*</label>
+            <div class="container_file__field">
+              <label class="file">
+                <span class="icon"></span>
+                <span class="text">Arraste e solte ou selecione arquivos.</span>
+              </label>
+              <input type="file" accept="image/png, image/jpeg" />
+            </div>
+            <div class="container-input-img-selected">
+              <figure>
+                <img id="image_preview" />
+              </figure>
+              <p class="name-img"></p>
+              <div class="container-btn-cancel">
+                <button>
+                  <img src="assets/img/fields/icon-cancel.svg" alt="" />
+                </button>
+              </div>
+            </div>
+            <p class="descrption">
+              São permitidos arquivos
+              <span> PNG, JPEG </span>
+              <span> até 1MB.</span>
+            </p>
+            <span id="file-message-error" class="descrption error"></span>
           </div>
-          <div class="container-input-img-selected">
-            <figure>
-              <img id="image_preview" />
-            </figure>
-            <p class="name-img"></p>
-            <div class="container-btn-cancel">
-              <button>
-                <img src="assets/img/fields/icon-cancel.svg"
-                  alt="" />
-              </button>
+
+          <div class="container-btn">
+            <button class="btn" disabled>Entrar</button>
+            <button class="btn green-primary">Entrar</button>
+            <button class="btn green-secondary">+ Adicionar</button>
+            <button class="btn red">Deletar</button>
+            <button class="btn red">Deletar usuário</button>
+            <button class="btn white">Voltar</button>
+            <a href="" class="btn edit">Editar</a>
+            <a href="" class="btn delete">Excluir</a>
+            <a href="" class="btn logout">Logout</a>
+          </div>
+
+          <div class="modal-container">
+            <div class="modal">
+              <figure class="modal__header">
+                <img src="" alt="" />
+              </figure>
+
+              <div class="modal__content">
+                <h2>Deseja mesmo excluir?</h2>
+                <p>Atenção, ao excluir, a ação não poderá ser mais desfeita.</p>
+              </div>
+
+              <div class="modal__footer">
+                <button class="btn white">Voltar</button>
+                <button class="btn red">Deletar</button>
+              </div>
             </div>
           </div>
-          <p class="descrption">
-            São permitidos arquivos
-            <span>
-              PNG, JPEG
-            </span>
-            <span> até 1MB.</span>
-          </p>
-          <span id="file-message-error"
-            class="descrption error"></span>
-        </div>
 
-
-        <div class="container-btn">
-          <button class="btn" disabled>Entrar</button>
-          <button class="btn green-primary">Entrar</button>
-          <button class="btn green-secondary">+ Adicionar</button>
-          <button class="btn red">Deletar</button>
-          <button class="btn red">Deletar usuário</button>
-          <button class="btn white">Voltar</button>
-          <a href="" class="btn edit">Editar</a>
-          <a href="" class="btn delete">Excluir</a>
-          <a href="" class="btn logout">Logout</a>
-        </div>
-
-        <div class="modal-container">
-          <div class="modal">
-            <figure class="modal__header">
-              <img src="" alt="" />
-            </figure>
-    
-            <div class="modal__content">
-              <h2>Deseja mesmo excluir?</h2>
-              <p>Atenção, ao excluir, a ação não poderá ser mais desfeita.</p>
-            </div>
-    
-            <div class="modal__footer">
-              <button class="btn white">Voltar</button>
-              <button class="btn red">Deletar</button>
-            </div>
+          <div class="card-home-emphasis">
+            <p class="card-title">CAMPO 1</p>
+            <hr class="card-line" />
+            <table>
+              <thead>
+                <tr>
+                  <td colspan="1">IMAGEM</td>
+                  <td colspan="1">TÍTULO</td>
+                  <td colspan="1">DESCRIÇÃO</td>
+                  <td colspan="1"></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="1">
+                    <figure class="figure-list">
+                      <img
+                        src="assets/img/home/icon-card-home-emphasis.png"
+                        alt=""
+                      />
+                    </figure>
+                  </td>
+                  <td colspan="1">Lorem Ipsum sit dolor</td>
+                  <td colspan="1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut… labore et dolore magna
+                    aliqua.
+                  </td>
+                  <td class="align-end">
+                    <a href="" class="btn edit">Editar</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-home-emphasis">
+            <p class="card-title">CAMPO 1</p>
+            <hr class="card-line" />
+            <table>
+              <thead>
+                <tr>
+                  <td colspan="1">IMAGEM</td>
+                  <td colspan="1">TÍTULO</td>
+                  <td colspan="1">DESCRIÇÃO</td>
+                  <td colspan="1"></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="1">
+                    <figure class="figure-list">
+                      <img
+                        src="assets/img/home/icon-card-home-emphasis.png"
+                        alt=""
+                      />
+                    </figure>
+                  </td>
+                  <td colspan="1">Lorem Ipsum sit dolor</td>
+                  <td colspan="1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut… labore et dolore magna
+                    aliqua.
+                  </td>
+                  <td class="align-end">
+                    <a href="" class="btn edit">Editar</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
-
-
       </div>
     </div>
 

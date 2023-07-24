@@ -834,6 +834,50 @@ input:checked + .slider:before {
   color: #000000;
 }
 
+.card-home-emphasis {
+  width: 100%;
+  font-family: "HDI Pro Book";
+  font-size: 0.75rem;
+  margin-bottom: 3.875rem;
+}
+.card-home-emphasis .card-title {
+  color: #6eab28;
+}
+.card-home-emphasis .card-line {
+  border: none;
+  background-color: #6eab28;
+  width: 100%;
+  height: 1px;
+  margin: 6px 0 12px 0;
+}
+.card-home-emphasis table {
+  width: 100%;
+}
+.card-home-emphasis table thead {
+  vertical-align: top;
+  height: 2.125rem;
+}
+.card-home-emphasis table thead tr td {
+  width: 25%;
+  color: #9d9d9c;
+}
+.card-home-emphasis table tbody tr td {
+  width: 25%;
+  font-size: 0.875rem;
+  color: #000000;
+}
+.card-home-emphasis table tbody tr td .figure-list {
+  width: 100%;
+  max-width: 114px;
+}
+.card-home-emphasis table tbody tr td .figure-list img {
+  width: 100%;
+  height: auto;
+}
+.card-home-emphasis table tbody tr td.align-end {
+  text-align: end;
+}
+
 .content-language {
   display: flex;
   gap: 10px;
