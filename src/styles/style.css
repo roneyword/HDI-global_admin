@@ -216,6 +216,7 @@ a {
 }
 .menu .menu__wrapper .content .content-title > h1 {
   font-family: "HDI Pro Book";
+  font-weight: 100;
   font-size: 2.5rem;
   color: #000000;
 }
@@ -898,6 +899,19 @@ input:checked + .slider:before {
 }
 .card-home-emphasis table tbody tr td.align-end {
   text-align: end;
+}
+
+.divisor {
+  width: 100%;
+  border-bottom: 1px solid #6eab28;
+  margin: 1.875rem 0;
+  padding-bottom: 0.4375rem;
+}
+.divisor > span {
+  font-family: "HDI Pro Book";
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #6eab28;
 }
 
 .content-language {

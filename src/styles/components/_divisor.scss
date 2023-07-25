@@ -1,0 +1,13 @@
+.divisor {
+  width: 100%;
+  border-bottom: 1px solid #6eab28;
+  margin: pxtorem(30) 0;
+  padding-bottom: pxtorem(7);
+
+  & > span {
+    font-family: "HDI Pro Book";
+    font-size: pxtorem(12);
+    text-transform: uppercase;
+    color: #6eab28;
+  }
+}
