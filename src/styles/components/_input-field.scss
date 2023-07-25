@@ -34,6 +34,15 @@
       left: calc(100% - 30px);
       background: none;
       border: none;
+
+      &.icon-password {
+        width: 30px;
+        top: 33px;
+        img {
+          width: 16px;
+          height: auto;
+        }
+      }
     }
     img {
       width: 11px;

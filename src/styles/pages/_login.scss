@@ -1,0 +1,58 @@
+.section-login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .title-login {
+    font-size: pxtorem(14);
+    color: $black;
+    font-family: "HDI Pro Bold";
+  }
+  .description{
+    font-size: pxtorem(14);
+    color: $black;
+    font-family: "HDI Pro Book";
+    line-height: 24px;
+  }
+
+  .box-login {
+    background-color: $white;
+    padding: pxtorem(40) pxtorem(49);
+    box-shadow: 0px 0px 25px #0000000f;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 398px;
+    position: relative;
+    .icon-square {
+      position: absolute;
+      left: -180px;
+      top: -110px;
+    }
+  }
+
+  .row-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: pxtorem(20);
+  }
+
+  .pt-30 {
+    padding-top: pxtorem(30);
+  }
+
+  .pt-10 {
+    padding-top: pxtorem(10);
+  }
+
+  .forgot-password {
+    font-size: pxtorem(10);
+    color: $green-900;
+  }
+
+  .container-btn-login {
+    text-align: center;
+  }
+}

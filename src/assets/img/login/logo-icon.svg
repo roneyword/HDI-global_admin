@@ -1,0 +1,14 @@
+<svg id="Component_52_3" data-name="Component 52 – 3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="73.226" height="28.467" viewBox="0 0 73.226 28.467">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1898" data-name="Rectangle 1898" width="73.226" height="28.467" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_253" data-name="Group 253" clip-path="url(#clip-path)">
+    <path id="Path_10813" data-name="Path 10813" d="M56.691,28.467H67.445c11.706,0,17.579-5.978,17.579-14.4V13.99C85.024,5.572,79.275,0,67.776,0H56.691Zm9.679-7.793V7.793h1.613c4.426,0,7.28,1.941,7.28,6.4v.088c0,4.456-2.854,6.4-7.28,6.4Z" transform="translate(-23.862)" fill="#005920"/>
+    <rect id="Rectangle_1894" data-name="Rectangle 1894" width="9.652" height="28.467" transform="translate(63.575)" fill="#005920"/>
+    <rect id="Rectangle_1895" data-name="Rectangle 1895" width="9.652" height="9.487" transform="translate(9.659 9.49)" fill="#d9000d"/>
+    <rect id="Rectangle_1896" data-name="Rectangle 1896" width="9.652" height="28.467" transform="translate(19.316)" fill="#005920"/>
+    <rect id="Rectangle_1897" data-name="Rectangle 1897" width="9.652" height="28.467" fill="#005920"/>
+  </g>
+</svg>
