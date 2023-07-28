@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../../styles/style.css" />
-    <title>Categorias Adicionar</title>
+    <title>Produtos | Produtos | Adicionar</title>
   </head>
 
   <body>
@@ -68,7 +68,7 @@
 
         <div class="content">
           <div class="content-title">
-            <h1>Produtos | <span>Categorias</span></h1>
+            <h1>Produtos | <span>Produtos</span></h1>
             <h2>Adicionar</h2>
           </div>
 
@@ -83,13 +83,534 @@
           </div>
 
           <div class="content-wrapper">
-            <div class="col w30">
-              <div class="input__field" data-js="nameCategory">
-                <label for="">Nome da categoria</label>
-                <input type="text" placeholder="Digite o nome da categoria" />
+            <div class="divisor">
+              <span>link da pagina</span>
+            </div>
+
+            <div class="col w25">
+              <div class="select__field icon" data-js="category">
+                <label for="">categoria*</label>
+                <div class="select__field-item">Selecione</div>
+                <figure>
+                  <img src="../../../assets/img/arrowup-icon.svg" alt="" />
+                </figure>
+
+                <ul class="select__field-list">
+                  <li>Saiba mais</li>
+                  <li>Veja mais</li>
+                  <li>Confira já</li>
+                </ul>
                 <span class="error__mensage">Mensagem de erro</span>
               </div>
             </div>
+
+            <div class="col w25">
+              <div
+                class="input__field icon"
+                data-copy="link"
+                data-js="linkPage"
+              >
+                <label for="">Link da pagina*</label>
+                <input class="" type="text" placeholder="Digite o link" />
+                <button>
+                  <img src="../../../assets/img/copypaste-icon.svg" alt="" />
+                  <span class="tooltip">Link copiado</span>
+                </button>
+                <span class="error__mensage">Mensagem de erro</span>
+              </div>
+            </div>
+
+            <div class="divisor">
+              <span>header</span>
+            </div>
+
+            <div class="col w25">
+              <div class="input__field" data-js="nameProduct">
+                <label for="">Nome do produto*</label>
+                <input type="text" placeholder="Digite o usuario" />
+                <span class="error__mensage">Mensagem de erro</span>
+              </div>
+            </div>
+
+            <div class="col w50">
+              <div class="textarea__field" data-js="description">
+                <label for="">Alt de Imagem</label>
+                <textarea
+                  cols="30"
+                  rows="5"
+                  maxlength="100"
+                  placeholder="Digite o texto de alt da imagem"
+                ></textarea>
+                <small>0/100</small>
+                <span class="error__mensage">Mensagem de erro</span>
+              </div>
+            </div>
+
+            <div class="col w25">
+              <div
+                class="file__field"
+                data-resolution="1920x1200"
+                data-sizeimg="1"
+                data-js="imgPrincipal"
+              >
+                <label class="label"
+                  >Imagem Desktop e Tablet (1920x1200px)*</label
+                >
+                <div class="container_file__field">
+                  <label class="file">
+                    <span class="icon"></span>
+                    <span class="text"
+                      >Arraste e solte ou selecione arquivos.</span
+                    >
+                  </label>
+                  <input type="file" accept="image/png, image/jpeg" />
+                </div>
+                <div class="container-input-img-selected">
+                  <figure>
+                    <img id="image_preview" />
+                  </figure>
+                  <p class="name-img"></p>
+                  <div class="container-btn-cancel">
+                    <button>
+                      <img
+                        src="../../../assets/img/fields/icon-cancel.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+                <p class="descrption">
+                  São permitidos arquivos
+                  <span> PNG, JPEG </span>
+                  <span> até 1MB.</span>
+                </p>
+                <span id="file-message-error" class="descrption error"></span>
+              </div>
+            </div>
+
+            <div class="col w25">
+              <div class="textarea__field" data-js="altImg">
+                <label for="">Alt de Imagem(principal)*</label>
+                <textarea
+                  cols="30"
+                  rows="5"
+                  maxlength="100"
+                  placeholder="Digite o texto de alt da imagem"
+                ></textarea>
+                <small>0/100</small>
+                <span class="error__mensage">Mensagem de erro</span>
+              </div>
+            </div>
+
+            <div class="col w25">
+              <div
+                class="file__field"
+                data-resolution="1920x1200"
+                data-sizeimg="1"
+                data-js="imgSecondary"
+              >
+                <label class="label"
+                  >Imagem Desktop e Tablet (1920x1200px)*</label
+                >
+                <div class="container_file__field">
+                  <label class="file">
+                    <span class="icon"></span>
+                    <span class="text"
+                      >Arraste e solte ou selecione arquivos.</span
+                    >
+                  </label>
+                  <input type="file" accept="image/png, image/jpeg" />
+                </div>
+                <div class="container-input-img-selected">
+                  <figure>
+                    <img id="image_preview" />
+                  </figure>
+                  <p class="name-img"></p>
+                  <div class="container-btn-cancel">
+                    <button>
+                      <img
+                        src="../../../assets/img/fields/icon-cancel.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+                <p class="descrption">
+                  São permitidos arquivos
+                  <span> PNG, JPEG </span>
+                  <span> até 1MB.</span>
+                </p>
+                <span id="file-message-error" class="descrption error"></span>
+              </div>
+            </div>
+
+            <div class="col w25">
+              <div class="textarea__field" data-js="altImgSecondary">
+                <label for="">Alt de Imagem(secundaria)*</label>
+                <textarea
+                  cols="30"
+                  rows="5"
+                  maxlength="100"
+                  placeholder="Digite o texto de alt da imagem"
+                ></textarea>
+                <small>0/100</small>
+                <span class="error__mensage">Mensagem de erro</span>
+              </div>
+            </div>
+
+            <div class="col w25">
+              <div class="input__field" data-js="linkBtn">
+                <label for="">Link do botão*</label>
+                <input type="text" placeholder="Digite o link" />
+                <span class="error__mensage">Mensagem de erro</span>
+              </div>
+            </div>
+
+            <div class="col w25">
+              <div class="select__field icon" data-js="btnCallToActionHeader">
+                <label for="">Botão / Call to action*</label>
+                <div class="select__field-item">Selecione</div>
+                <figure>
+                  <img src="../../../assets/img/arrowup-icon.svg" alt="" />
+                </figure>
+
+                <ul class="select__field-list">
+                  <li>Saiba mais</li>
+                  <li>Veja mais</li>
+                  <li>Confira já</li>
+                </ul>
+                <span class="error__mensage">Mensagem de erro</span>
+              </div>
+            </div>
+
+            <div class="divisor">
+              <span>coberturas basicas</span>
+            </div>
+
+            <div class="col w100">
+              <div class="card__container" data-group="additionalBasic">
+                <div class="card" data-id="0">
+                  <div class="card__content">
+                    <div class="col w50">
+                      <div
+                        class="textarea__field"
+                        data-validation="min"
+                        data-name="nameCoverage"
+                      >
+                        <label for="">Nome da cobertura*</label>
+                        <textarea
+                          cols="30"
+                          rows="5"
+                          maxlength="100"
+                          placeholder="Digite o texto de alt da imagem"
+                        ></textarea>
+                        <small>0/100</small>
+                        <span class="error__mensage">Mensagem de erro</span>
+                      </div>
+                    </div>
+
+                    <div class="col w50">
+                      <div
+                        class="file__field"
+                        data-resolution="1920x1200"
+                        data-sizeimg="1"
+                        data-validation="file"
+                        data-name="iconCoverage"
+                      >
+                        <label class="label">icone da cobertura*</label>
+                        <div class="container_file__field">
+                          <label class="file">
+                            <span class="icon"></span>
+                            <span class="text"
+                              >Arraste e solte ou selecione arquivos.</span
+                            >
+                          </label>
+                          <input type="file" accept="image/png, image/jpeg" />
+                        </div>
+                        <div class="container-input-img-selected">
+                          <figure>
+                            <img id="image_preview" />
+                          </figure>
+                          <p class="name-img"></p>
+                          <div class="container-btn-cancel">
+                            <button>
+                              <img
+                                src="../../../assets/img/fields/icon-cancel.svg"
+                                alt=""
+                              />
+                            </button>
+                          </div>
+                        </div>
+                        <p class="descrption">
+                          São permitidos arquivos
+                          <span> PNG, JPEG </span>
+                          <span> até 1MB.</span>
+                        </p>
+                        <span
+                          id="file-message-error"
+                          class="descrption error"
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card__controler">
+                    <button class="btn card__controler__close d-none">
+                      <img src="../../../assets/img/close-icon.svg" alt="" />
+                    </button>
+                    <button class="btn green-secondary card__controler__add">
+                      + Adicionar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="divisor">
+              <span>coberturas adicionais</span>
+            </div>
+
+            <div class="col w100">
+              <div class="card__container" data-group="additionalCoverages">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="col w100">
+                      <div class="textarea__field" data-validation="min">
+                        <label for="">Nome da cobertura*</label>
+                        <textarea
+                          cols="30"
+                          rows="5"
+                          maxlength="100"
+                          placeholder="Digite o texto de alt da imagem"
+                        ></textarea>
+                        <small>0/100</small>
+                        <span class="error__mensage">Mensagem de erro</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card__controler">
+                    <button class="btn card__controler__close d-none">
+                      <img src="../../../assets/img/close-icon.svg" alt="" />
+                    </button>
+                    <button class="btn green-secondary card__controler__add">
+                      + Adicionar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--  <div class="divisor">
+              <span>assistencia</span>
+            </div>
+
+            <div class="col w100">
+              <div class="card__container" data-group="assistance">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="col w100">
+                      <div class="textarea__field" data-validation="min">
+                        <label for="">Nome da assistencia*</label>
+                        <textarea
+                          cols="30"
+                          rows="5"
+                          maxlength="100"
+                          placeholder="Digite o texto de alt da imagem"
+                        ></textarea>
+                        <small>0/100</small>
+                        <span class="error__mensage">Mensagem de erro</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card__controler">
+                    <button class="btn card__controler__close d-none">
+                      <img src="../../../assets/img/close-icon.svg" alt="" />
+                    </button>
+                    <button class="btn green-secondary card__controler__add">
+                      + Adicionar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="divisor">
+              <span>condições contratuais</span>
+            </div>
+
+            <div class="col w100">
+              <div class="card__container" data-group="contractualConditions">
+                <div class="card">
+                  <div class="card__content">
+                    <div class="col w25">
+                      <div class="input__field" data-validation="min">
+                        <label for="">Titulo*</label>
+                        <input type="text" placeholder="Digite o titulo" />
+                        <span class="error__mensage">Mensagem de erro</span>
+                      </div>
+                    </div>
+
+                    <div class="col w25">
+                      <div class="input__field" data-validation="dateInit">
+                        <label for="">Inicio da vigencia*</label>
+                        <input type="date" placeholder="DD/MM/AAAA" />
+                        <span class="error__mensage">Mensagem de erro</span>
+                      </div>
+                    </div>
+
+                    <div class="col w25">
+                      <div class="input__field" data-validation="dateFinish">
+                        <label for="">termino da vigencia*</label>
+                        <input type="date" placeholder="DD/MM/AAAA" />
+                        <span class="error__mensage">Mensagem de erro</span>
+                      </div>
+                    </div>
+
+                    <div class="col w25">
+                      <div class="external-link">
+                        <span>Ainda está vigente ?</span>
+
+                        <div
+                          class="external-link__checkbox"
+                          data-validation="isExternal"
+                        >
+                          <small>Não</small>
+
+                          <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider round"></span>
+                          </label>
+                          <small>Sim</small>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col w100">
+                      <div
+                        class="file__field"
+                        data-resolution="1920x1200"
+                        data-sizeimg="1"
+                        data-validation="file"
+                      >
+                        <label class="label">icone da cobertura*</label>
+                        <div class="container_file__field">
+                          <label class="file">
+                            <span class="icon"></span>
+                            <span class="text"
+                              >Arraste e solte ou selecione arquivos.</span
+                            >
+                          </label>
+                          <input type="file" accept="image/png, image/jpeg" />
+                        </div>
+                        <div class="container-input-img-selected">
+                          <figure>
+                            <img id="image_preview" />
+                          </figure>
+                          <p class="name-img"></p>
+                          <div class="container-btn-cancel">
+                            <button>
+                              <img
+                                src="../../../assets/img/fields/icon-cancel.svg"
+                                alt=""
+                              />
+                            </button>
+                          </div>
+                        </div>
+                        <p class="descrption">
+                          São permitidos arquivos
+                          <span> PNG, JPEG </span>
+                          <span> até 1MB.</span>
+                        </p>
+                        <span
+                          id="file-message-error"
+                          class="descrption error"
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card__controler">
+                    <button class="btn card__controler__close d-none">
+                      <img src="../../../assets/img/close-icon.svg" alt="" />
+                    </button>
+                    <button class="btn green-secondary card__controler__add">
+                      + Adicionar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="divisor">
+              <span>por que escolher hdi</span>
+            </div>
+
+            <div class="col w25">
+              <div class="textarea__field" data-js="descriptionHowTo">
+                <label for="">Descrição*</label>
+                <textarea
+                  cols="30"
+                  rows="5"
+                  maxlength="100"
+                  placeholder="Digite o texto de alt da imagem"
+                ></textarea>
+                <small>0/100</small>
+                <span class="error__mensage">Mensagem de erro</span>
+              </div>
+            </div>
+
+            <div class="col w25">
+              <div class="select__field icon" data-js="benefitsOne">
+                <label for="">Beneficios 1</label>
+                <div class="select__field-item">Selecione</div>
+                <figure>
+                  <img src="../../../assets/img/arrowup-icon.svg" alt="" />
+                </figure>
+
+                <ul class="select__field-list">
+                  <li>Saiba mais</li>
+                  <li>Veja mais</li>
+                  <li>Confira já</li>
+                </ul>
+                <span class="error__mensage">Mensagem de erro</span>
+              </div>
+            </div>
+
+            <div class="col w25">
+              <div class="select__field icon" data-js="benefitsTwo">
+                <label for="">Beneficios 2</label>
+                <div class="select__field-item">Selecione</div>
+                <figure>
+                  <img src="../../../assets/img/arrowup-icon.svg" alt="" />
+                </figure>
+
+                <ul class="select__field-list">
+                  <li>Saiba mais</li>
+                  <li>Veja mais</li>
+                  <li>Confira já</li>
+                </ul>
+                <span class="error__mensage">Mensagem de erro</span>
+              </div>
+            </div>
+
+            <div class="col w25">
+              <div class="select__field icon" data-js="benefitsThree">
+                <label for="">Beneficios 3</label>
+                <div class="select__field-item">Selecione</div>
+                <figure>
+                  <img src="../../../assets/img/arrowup-icon.svg" alt="" />
+                </figure>
+
+                <ul class="select__field-list">
+                  <li>Saiba mais</li>
+                  <li>Veja mais</li>
+                  <li>Confira já</li>
+                </ul>
+                <span class="error__mensage">Mensagem de erro</span>
+              </div>
+            </div> -->
 
             <div class="content-footer">
               <button class="btn green-primary">Salvar</button>
@@ -99,10 +620,12 @@
       </div>
     </div>
 
-    <script type="module" src="../../../js/menu.js"></script>
-    <script
-      type="module"
-      src="../../../js/pages/produtos/categorias/categorias-add.js"
-    ></script>
+    <script src="../../../js/menu.js"></script>
+    <script src="../../../js/select.js"></script>
+    <script src="../../../js/textArea.js"></script>
+    <script src="../../../js/copypaste.js"></script>
+    <!-- <script src="../../../js/pages/produtos/produtos/produtos-add.js"></script> -->
+    <!-- <script src="../../../js/pages/produtos/produtos/teste.js"></script> -->
+    <script src="../../../js/pages/produtos/produtos/teste2.js"></script>
   </body>
 </html>

@@ -114,6 +114,12 @@
   }
 }
 
+.textarea__field {
+  & > textarea {
+    min-height: 150px;
+  }
+}
+
 .select__field {
   cursor: pointer;
   &.isActive {

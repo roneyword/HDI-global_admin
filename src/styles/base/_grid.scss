@@ -8,21 +8,21 @@
 
 .col {
   &.w25 {
-    width: 25%;
+    width: calc(25% - 22px);
   }
 
   &.w30 {
-    width: 30%;
+    width: calc(30% - 22px);
   }
 
   &.w50 {
-    width: 50%;
+    width: calc(50% - 22px);
   }
   &.w75 {
-    width: 75%;
+    width: calc(75% - 22px);
   }
   &.w100 {
-    width: 100%;
+    width: calc(100% - 22px);
   }
 }
 

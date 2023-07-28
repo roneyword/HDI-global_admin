@@ -1,0 +1,43 @@
+.card__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  & > .card {
+    display: flex;
+    align-items: center;
+
+    & > .card__content {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: pxtorem(22);
+      margin-bottom: pxtorem(22);
+      padding: pxtorem(21);
+      background: #6eab280a 0% 0% no-repeat padding-box;
+      border: 1px solid #6eab28;
+      border-radius: 5px;
+
+      &:last-child {
+        margin-bottom: pxtorem(0);
+      }
+    }
+    & > .card__controler {
+      margin-left: pxtorem(20);
+
+      .card__controler__close {
+        display: inline-block;
+
+        &.d-none {
+          visibility: hidden;
+        }
+      }
+
+      .card__controler__add {
+        &.d-none {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+}

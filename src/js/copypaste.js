@@ -5,6 +5,10 @@ inputFieldLink.forEach((link) => {
   const tooltip = link.querySelector(".tooltip");
 
   handleCopy.addEventListener("click", () => {
+    tooltip.innerHTML = !inputValue.value.length
+      ? "Campo vazio!"
+      : "Link copiado";
+
     inputValue.select();
     inputValue.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(inputValue.value);
