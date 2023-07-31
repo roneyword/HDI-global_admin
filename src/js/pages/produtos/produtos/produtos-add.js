@@ -95,101 +95,83 @@ let valuesInput = {
   },
 };
 
-// let dynamicValuesInput = {};
-
-let dynamicValuesInput = {
-  basicCoverages: [
-    {
-      nameCovarege: {
-        value: "",
-        error: true,
-        referenceError: "",
-      },
-      iconCoverage: {
-        value: "",
-        error: true,
-        referenceError: "",
-      },
+let basicCoverage = {
+  0: {
+    nameCoverage: {
+      value: "",
+      error: true,
+      referenceError: "",
     },
-  ],
-  additionalCoverages: [
-    {
-      nameAditional: {
-        value: "",
-        error: true,
-        referenceError: "",
-      },
+    iconCoverage: {
+      value: "",
+      error: true,
+      referenceError: "",
     },
-  ],
-  assistance: [
-    {
-      nameAssistance: {
-        value: "",
-        error: true,
-        referenceError: "",
-      },
-    },
-  ],
-  contractualConditions: [
-    {
-      titleContactual: {
-        value: "",
-        error: true,
-        referenceError: "",
-      },
-    },
-    {
-      dateInitialContactual: {
-        value: "",
-        error: true,
-        referenceError: "",
-      },
-    },
-    {
-      dateExitContactual: {
-        value: "",
-        error: true,
-        referenceError: "",
-      },
-    },
-    {
-      isVigenteContactual: {
-        value: "",
-        error: false,
-        referenceError: "",
-      },
-    },
-    {
-      iconContactual: {
-        value: "",
-        error: false,
-        referenceError: "",
-      },
-    },
-  ],
+  },
 };
 
-const validateMinCaracter = (field, obj, min = 3, refer, index) => {
+let additionalBasic = {
+  0: {
+    nameCoverage: {
+      value: "",
+      error: true,
+      referenceError: "",
+    },
+  },
+};
+
+let assistance = {
+  0: {
+    nameAssistance: {
+      value: "",
+      error: true,
+      referenceError: "",
+    },
+  },
+};
+
+let contractualConditions = {
+  0: {
+    title: {
+      value: "",
+      error: true,
+      referenceError: "",
+    },
+    beginningValidity: {
+      value: "",
+      error: true,
+      referenceError: "",
+    },
+    expirationDate: {
+      value: "",
+      error: true,
+      referenceError: "",
+    },
+    isValidity: {
+      value: "",
+      error: false,
+      referenceError: "",
+    },
+    iconCoverage: {
+      value: "",
+      error: true,
+      referenceError: "",
+    },
+  },
+};
+
+const validateMinCaracter = (field, obj, min = 3, index = null) => {
   const input = field.querySelector("input") || field.querySelector("textarea");
 
   input.addEventListener("keyup", (e) => {
-    console.log(refer);
-    console.log(field.dataset.name);
-
     if (e.target.value.trim().length < min) {
       field.classList.add("error");
 
-      if (refer) {
-        dynamicValuesInput[refer][index] = {
-          ...dynamicValuesInput[refer][index],
-          [field.dataset.name]: {
-            value: e.target.value,
-            error: true,
-            referenceError: field,
-          },
-        };
+      if (index !== null) {
+        obj[index][field.dataset.name].value = e.target.value;
+        obj[index][field.dataset.name].error = true;
+        obj[index][field.dataset.name].referenceError = field;
 
-        console.log(dynamicValuesInput);
         return;
       }
 
@@ -202,6 +184,14 @@ const validateMinCaracter = (field, obj, min = 3, refer, index) => {
     }
 
     field.classList.remove("error");
+
+    if (index !== null) {
+      obj[index][field.dataset.name].value = e.target.value;
+      obj[index][field.dataset.name].error = false;
+      obj[index][field.dataset.name].referenceError = field;
+
+      return;
+    }
 
     obj[field.dataset.js] = {
       value: e.target.value,
@@ -223,7 +213,7 @@ const validateSelect = (field, obj) => {
   });
 };
 
-const validateFile = (fieldFile, obj) => {
+const validateFile = (fieldFile, obj, index = null) => {
   const handleActiveFileField = () => {
     const btnCancel = fieldFile.querySelector(".container-btn-cancel button");
 
@@ -246,6 +236,14 @@ const validateFile = (fieldFile, obj) => {
     if (!formatImg) {
       error.innerText = "Verifique o formato da imagem.";
 
+      if (index !== null) {
+        obj[index][field.dataset.name].value = e.target.value;
+        obj[index][field.dataset.name].error = true;
+        obj[index][field.dataset.name].referenceError = field;
+
+        return;
+      }
+
       obj[fieldFile.dataset.js] = {
         value: "",
         error: true,
@@ -257,6 +255,14 @@ const validateFile = (fieldFile, obj) => {
     if (!resolutionImg) {
       error.innerText = "Verifique o tamanho em PX da imagem.";
 
+      if (index !== null) {
+        obj[index][field.dataset.name].value = e.target.value;
+        obj[index][field.dataset.name].error = true;
+        obj[index][field.dataset.name].referenceError = field;
+
+        return;
+      }
+
       obj[fieldFile.dataset.js] = {
         value: "",
         error: true,
@@ -267,6 +273,14 @@ const validateFile = (fieldFile, obj) => {
 
     if (!sizeImg) {
       error.innerText = "Verifique o tamanho em MB da imagem.";
+
+      if (index !== null) {
+        obj[index][field.dataset.name].value = e.target.value;
+        obj[index][field.dataset.name].error = true;
+        obj[index][field.dataset.name].referenceError = field;
+
+        return;
+      }
 
       obj[fieldFile.dataset.js] = {
         value: "",
@@ -289,6 +303,16 @@ const validateFile = (fieldFile, obj) => {
     };
 
     reader.readAsDataURL(e.srcElement.files[0]);
+
+    if (index !== null) {
+      obj[index][field.dataset.name].value = e.target.value;
+      obj[index][field.dataset.name].error = false;
+      obj[index][field.dataset.name].referenceError = field;
+
+      error.innerText = "";
+
+      return;
+    }
 
     obj[fieldFile.dataset.js] = {
       value: e.srcElement.files[0],
@@ -331,7 +355,7 @@ const validateFile = (fieldFile, obj) => {
   handleActiveFileField();
 };
 
-const validateCurrentDate = (field, obj) => {
+const validateCurrentDate = (field, obj, index = null) => {
   const inputEl = field.querySelector("input");
 
   inputEl.addEventListener("change", (e) => {
@@ -342,12 +366,30 @@ const validateCurrentDate = (field, obj) => {
 
     if (inputDate >= newDate) {
       field.classList.remove("error");
+
+      if (index !== null) {
+        obj[index][field.dataset.name].value = e.target.value;
+        obj[index][field.dataset.name].error = false;
+        obj[index][field.dataset.name].referenceError = field;
+
+        return;
+      }
+
       obj[field.dataset.js] = {
         value: e.target.value,
         error: false,
       };
     } else {
       field.classList.add("error");
+
+      if (index !== null) {
+        obj[index][field.dataset.name].value = e.target.value;
+        obj[index][field.dataset.name].error = true;
+        obj[index][field.dataset.name].referenceError = field;
+
+        return;
+      }
+
       obj[field.dataset.js] = {
         value: e.target.value,
         error: true,
@@ -356,7 +398,7 @@ const validateCurrentDate = (field, obj) => {
   });
 };
 
-const validateExitDate = (field, initDate, obj) => {
+const validateExitDate = (field, initDate, obj, index = null) => {
   const inputEl = field.querySelector("input");
 
   inputEl.addEventListener("change", (e) => {
@@ -370,12 +412,30 @@ const validateExitDate = (field, initDate, obj) => {
 
     if (inputDate <= newDate) {
       field.classList.add("error");
+
+      if (index !== null) {
+        obj[index][field.dataset.name].value = e.target.value;
+        obj[index][field.dataset.name].error = true;
+        obj[index][field.dataset.name].referenceError = field;
+
+        return;
+      }
+
       obj[field.dataset.js] = {
         value: e.target.value,
         error: true,
       };
     } else {
       field.classList.remove("error");
+
+      if (index !== null) {
+        obj[index][field.dataset.name].value = e.target.value;
+        obj[index][field.dataset.name].error = false;
+        obj[index][field.dataset.name].referenceError = field;
+
+        return;
+      }
+
       obj[field.dataset.js] = {
         value: e.target.value,
         error: false,
@@ -384,10 +444,18 @@ const validateExitDate = (field, initDate, obj) => {
   });
 };
 
-const isActiveExternalLink = (field, obj) => {
+const isActiveExternalLink = (field, obj, index) => {
   const externalLink = field.querySelector("input");
 
   externalLink.addEventListener("click", (e) => {
+    if (index !== null) {
+      obj[index][field.dataset.name].value = e.target.checked;
+      obj[index][field.dataset.name].error = false;
+      obj[index][field.dataset.name].referenceError = field;
+
+      return;
+    }
+
     obj[field.dataset.js] = {
       value: e.target.checked,
       error: false,
@@ -442,136 +510,42 @@ const onValidationInputs = () => {
   });
 };
 
-const handleSubmite = (obj) => {
-  const btnSubmite = document.querySelector(".content-footer button");
-
-  btnSubmite.addEventListener("click", () => {
-    const hasErrorTrue = (obj) => {
-      for (const key in obj) {
-        if (obj.hasOwnProperty(key) && obj[key].error === true) {
-          return true;
-        }
-      }
-      return false;
-    };
-
-    const showErroView = (obj) => {
-      for (const key in obj) {
-        if (obj.hasOwnProperty(key) && obj[key].error === true) {
-          obj[key].referenceError.classList.add("error");
-        }
-      }
-    };
-
-    showErroView(obj);
-    if (hasErrorTrue(obj)) {
-      // não pode validar
-    } else {
-      // pode validar
-    }
-  });
-};
-
 onValidationInputs();
-handleSubmite(valuesInput);
 
-const cardContainer = document.querySelectorAll(".card__container");
+// -------------------- validações dos itens dinamicos teste -------------------
+const groupAdditionalBasic = document.querySelector(
+  "[data-group='additionalBasic']"
+);
 
-cardContainer.forEach((card) => {
-  const buttonAdd = card.querySelector(
+const groupAdditionalCoverages = document.querySelector(
+  "[data-group='additionalCoverages']"
+);
+
+const groupAdditionalAssistance = document.querySelector(
+  "[data-group='assistance']"
+);
+
+const groupContractualConditions = document.querySelector(
+  "[data-group='contractualConditions']"
+);
+
+const onValidationDinamicInputs = (group, array) => {
+  const buttonAdd = group.querySelector(
     ".card__container .card__controler__add"
   );
 
-  const createCloneCard = () => card.querySelector(".card").innerHTML;
+  const buttonClose = group.querySelector(
+    ".card__container .card__controler__close"
+  );
 
+  const cardsCreate = [0];
+  const copyArray = JSON.stringify(array[0]);
+
+  const createCloneCard = () => group.querySelector(".card").innerHTML;
   const clonedCard = createCloneCard();
 
-  const handleAddCard = (button) => {
-    button.addEventListener("click", () => createCard());
-  };
-
-  const onHandleAddValidation = (card, reference) => {
-    const groupName = card.dataset.group || reference.dataset.group;
-
-    const dataValidations = reference
-      ? reference.querySelectorAll("[data-validation]")
-      : card.querySelectorAll("[data-validation]");
-
-    // dataValidations.forEach((input) => {
-    //   dynamicValuesInput[groupName].push({
-    //     value: "",
-    //     error: true,
-    //     referenceError: input,
-    //   });
-    // });
-
-    // const inputsValue = card.querySelectorAll("[data-validation]");
-    console.log(card);
-
-    dataValidations.forEach((input, index) => {
-      // inserir a validaçã aqui
-      console.log(index);
-      if (input.dataset.validation === "min") {
-        validateMinCaracter(input, dynamicValuesInput, 10, groupName, index);
-        return;
-      }
-
-      // if (input.dataset.validation === "file") {
-      //   validateFile(input, dynamicValuesInput);
-      //   return;
-      // }
-      // if (input.dataset.validation === "dateInit") {
-      //   validateCurrentDate(input, dynamicValuesInput);
-      //   return;
-      // }
-
-      // if (input.dataset.validation === "dateFinish") {
-      //   validateExitDate(
-      //     input,
-      //     document.querySelector('[data-validation="dateInit"]'),
-      //     valuesInput
-      //   );
-      //   return;
-      // }
-
-      // if (input.dataset.validation === "dateInit") {
-      //   isActiveExternalLink(input, dynamicValuesInput);
-      //   return;
-      // }
-    });
-  };
-
-  handleAddCard(buttonAdd);
-  onHandleAddValidation(card, "");
-
-  const createCard = () => {
-    const newElement = document.createElement("div");
-    newElement.innerHTML = clonedCard;
-    newElement.classList.add("card");
-    card.appendChild(newElement);
-
-    onHideButton();
-    toUpdateEvent(card);
-    handleCloseCard();
-  };
-
-  const toUpdateEvent = (reference) => {
-    const cardList = card.querySelectorAll(".card");
-    handleAddCard(
-      cardList[cardList.length - 1].querySelector(
-        ".card__container .card__controler__add"
-      )
-    );
-
-    // cardList.forEach((cardItem) => {
-    //   onHandleAddValidation(cardItem, reference);
-    // });
-
-    onHandleAddValidation(cardList[cardList.length - 1], reference);
-  };
-
   const onHideButton = () => {
-    const cardList = card.querySelectorAll(".card");
+    const cardList = group.querySelectorAll(".card");
 
     cardList.forEach((card, index) => {
       if (cardList.length === 1) {
@@ -592,16 +566,157 @@ cardContainer.forEach((card) => {
     });
   };
 
-  const handleCloseCard = () => {
-    const cards = document.querySelectorAll(".card");
+  const toUpdateEvent = () => {
+    const cardList = group.querySelectorAll(".card");
+    const lastButtonAdd = cardList[cardList.length - 1].querySelector(
+      ".card__container .card__controler__add"
+    );
+
+    lastButtonAdd.addEventListener("click", insertNewCardOnHTML);
+  };
+
+  const handleCloseCard = (card) => {
+    cardsCreate.forEach((item, index) => {
+      if (item == card.dataset.id) {
+        cardsCreate.splice(index, 1);
+      }
+    });
+
+    card.remove();
+    onHideButton();
+    onRemoveItemArray(card.dataset.id);
+  };
+
+  const onAddItemArray = () => {
+    const lastAddItemId = cardsCreate[cardsCreate.length - 1];
+    array[lastAddItemId] = {
+      ...JSON.parse(copyArray),
+    };
+  };
+
+  const onRemoveItemArray = (index) => delete array[index];
+
+  const onValidationInputs = () => {
+    const cards = group.querySelectorAll(".card");
 
     cards.forEach((card) => {
-      card
-        .querySelector(".card__container .card__controler__close")
-        .addEventListener("click", () => {
-          card.remove();
-          onHideButton();
-        });
+      const item = card.querySelectorAll("[data-validation]");
+
+      item.forEach((input) => {
+        if (input.dataset.validation === "min") {
+          array[card.dataset.id][input.dataset.name].referenceError = input;
+          validateMinCaracter(input, array, 10, card.dataset.id);
+          return;
+        }
+
+        if (input.dataset.validation === "file") {
+          array[card.dataset.id][input.dataset.name].referenceError = input;
+          validateFile(input, array, card.dataset.id);
+          return;
+        }
+
+        if (input.dataset.validation === "dateInit") {
+          array[card.dataset.id][input.dataset.name].referenceError = input;
+          validateCurrentDate(input, array, card.dataset.id);
+          return;
+        }
+
+        if (input.dataset.validation === "dateFinish") {
+          array[card.dataset.id][input.dataset.name].referenceError = input;
+          validateExitDate(input, "2023-07-31", array, card.dataset.id);
+          return;
+        }
+
+        if (input.dataset.validation === "isValidity") {
+          array[card.dataset.id][input.dataset.name].referenceError = input;
+          isActiveExternalLink(input, array, card.dataset.id);
+          return;
+        }
+      });
     });
   };
-});
+
+  const insertNewCardOnHTML = () => {
+    cardsCreate.push(cardsCreate[cardsCreate.length - 1] + 1);
+    const newElement = document.createElement("div");
+    newElement.innerHTML = clonedCard;
+    newElement.classList.add("card");
+    newElement.setAttribute("data-id", cardsCreate[cardsCreate.length - 1]);
+    group.appendChild(newElement);
+
+    onHideButton();
+    toUpdateEvent();
+    onAddItemArray();
+    onValidationInputs();
+
+    newElement
+      .querySelector(".card__controler__close")
+      .addEventListener("click", () => handleCloseCard(newElement));
+  };
+
+  // initial
+  buttonAdd.addEventListener("click", insertNewCardOnHTML);
+  buttonClose.addEventListener("click", () =>
+    handleCloseCard(group.querySelector(".card"), 0)
+  );
+
+  onValidationInputs();
+};
+
+onValidationDinamicInputs(groupAdditionalBasic, basicCoverage);
+onValidationDinamicInputs(groupAdditionalCoverages, additionalBasic);
+onValidationDinamicInputs(groupAdditionalAssistance, assistance);
+onValidationDinamicInputs(groupContractualConditions, contractualConditions);
+
+function getAllReferenceErrors(obj) {
+  const result = {};
+  for (const index in obj) {
+    const nestedObj = obj[index];
+    for (const fieldName in nestedObj) {
+      if (nestedObj[fieldName].error) {
+        nestedObj[fieldName].referenceError.classList.add("error");
+        result[fieldName] = nestedObj[fieldName].error;
+      }
+    }
+  }
+
+  return result;
+}
+
+const handleSubmite = (obj) => {
+  const btnSubmite = document.querySelector(".content-footer button");
+
+  btnSubmite.addEventListener("click", () => {
+    getAllReferenceErrors(basicCoverage);
+    getAllReferenceErrors(additionalBasic);
+    getAllReferenceErrors(assistance);
+    getAllReferenceErrors(contractualConditions);
+
+    const hasErrorTrue = (obj) => {
+      for (const key in obj) {
+        if (obj.hasOwnProperty(key) && obj[key].error === true) {
+          return true;
+        }
+      }
+      return false;
+    };
+
+    const showErroView = (obj) => {
+      for (const key in obj) {
+        if (obj.hasOwnProperty(key) && obj[key].error === true) {
+          obj[key].referenceError.classList.add("error");
+        }
+      }
+    };
+
+    showErroView(obj);
+
+    if (hasErrorTrue(obj)) {
+      // não pode validar
+    } else {
+      // pode validar
+    }
+  });
+};
+
+handleSubmite(valuesInput);

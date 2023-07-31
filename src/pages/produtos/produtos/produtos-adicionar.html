@@ -372,10 +372,14 @@
 
             <div class="col w100">
               <div class="card__container" data-group="additionalCoverages">
-                <div class="card">
+                <div class="card" data-id="0">
                   <div class="card__content">
                     <div class="col w100">
-                      <div class="textarea__field" data-validation="min">
+                      <div
+                        class="textarea__field"
+                        data-validation="min"
+                        data-name="nameCoverage"
+                      >
                         <label for="">Nome da cobertura*</label>
                         <textarea
                           cols="30"
@@ -401,16 +405,20 @@
               </div>
             </div>
 
-            <!--  <div class="divisor">
+            <div class="divisor">
               <span>assistencia</span>
             </div>
 
             <div class="col w100">
               <div class="card__container" data-group="assistance">
-                <div class="card">
+                <div class="card" data-id="0">
                   <div class="card__content">
                     <div class="col w100">
-                      <div class="textarea__field" data-validation="min">
+                      <div
+                        class="textarea__field"
+                        data-validation="min"
+                        data-name="nameAssistance"
+                      >
                         <label for="">Nome da assistencia*</label>
                         <textarea
                           cols="30"
@@ -442,10 +450,14 @@
 
             <div class="col w100">
               <div class="card__container" data-group="contractualConditions">
-                <div class="card">
+                <div class="card" data-id="0">
                   <div class="card__content">
                     <div class="col w25">
-                      <div class="input__field" data-validation="min">
+                      <div
+                        class="input__field"
+                        data-validation="min"
+                        data-name="title"
+                      >
                         <label for="">Titulo*</label>
                         <input type="text" placeholder="Digite o titulo" />
                         <span class="error__mensage">Mensagem de erro</span>
@@ -453,7 +465,11 @@
                     </div>
 
                     <div class="col w25">
-                      <div class="input__field" data-validation="dateInit">
+                      <div
+                        class="input__field"
+                        data-validation="dateInit"
+                        data-name="beginningValidity"
+                      >
                         <label for="">Inicio da vigencia*</label>
                         <input type="date" placeholder="DD/MM/AAAA" />
                         <span class="error__mensage">Mensagem de erro</span>
@@ -461,7 +477,11 @@
                     </div>
 
                     <div class="col w25">
-                      <div class="input__field" data-validation="dateFinish">
+                      <div
+                        class="input__field"
+                        data-validation="dateFinish"
+                        data-name="expirationDate"
+                      >
                         <label for="">termino da vigencia*</label>
                         <input type="date" placeholder="DD/MM/AAAA" />
                         <span class="error__mensage">Mensagem de erro</span>
@@ -474,7 +494,8 @@
 
                         <div
                           class="external-link__checkbox"
-                          data-validation="isExternal"
+                          data-validation="isValidity"
+                          data-name="isValidity"
                         >
                           <small>Não</small>
 
@@ -493,6 +514,7 @@
                         data-resolution="1920x1200"
                         data-sizeimg="1"
                         data-validation="file"
+                        data-name="iconCoverage"
                       >
                         <label class="label">icone da cobertura*</label>
                         <div class="container_file__field">
@@ -610,7 +632,7 @@
                 </ul>
                 <span class="error__mensage">Mensagem de erro</span>
               </div>
-            </div> -->
+            </div>
 
             <div class="content-footer">
               <button class="btn green-primary">Salvar</button>
@@ -624,8 +646,6 @@
     <script src="../../../js/select.js"></script>
     <script src="../../../js/textArea.js"></script>
     <script src="../../../js/copypaste.js"></script>
-    <!-- <script src="../../../js/pages/produtos/produtos/produtos-add.js"></script> -->
-    <!-- <script src="../../../js/pages/produtos/produtos/teste.js"></script> -->
-    <script src="../../../js/pages/produtos/produtos/teste2.js"></script>
+    <script src="../../../js/pages/produtos/produtos/produtos-add.js"></script>
   </body>
 </html>
