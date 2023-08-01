@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../styles/style.css" />
-    <title>Grupo HDI | Nova pagina</title>
+    <title>Paginas avulsas | Nova pagina</title>
   </head>
 
   <body>
@@ -68,7 +68,7 @@
 
         <div class="content">
           <div class="content-title">
-            <h1>Grupo HDI | <span>Nova página</span></h1>
+            <h1>Paginas Avulsas | <span>Nova página</span></h1>
             <h2>Adicionar</h2>
           </div>
 
@@ -83,6 +83,43 @@
           </div>
 
           <div class="content-wrapper">
+            <div class="divisor">
+              <span>Link da página</span>
+            </div>
+
+            <div class="col w25">
+              <div class="select__field icon" data-js="category">
+                <label for="">categoria*</label>
+                <div class="select__field-item">Selecione</div>
+                <figure>
+                  <img src="../../assets/img/arrowup-icon.svg" alt="" />
+                </figure>
+
+                <ul class="select__field-list">
+                  <li>Saiba mais</li>
+                  <li>Veja mais</li>
+                  <li>Confira já</li>
+                </ul>
+                <span class="error__mensage">Mensagem de erro</span>
+              </div>
+            </div>
+
+            <div class="col w25">
+              <div
+                class="input__field icon"
+                data-copy="link"
+                data-js="linkPageHeader"
+              >
+                <label for="">Link da pagina*</label>
+                <input class="" type="text" placeholder="Digite o link" />
+                <button>
+                  <img src="../../assets/img/copypaste-icon.svg" alt="" />
+                  <span class="tooltip">Link copiado</span>
+                </button>
+                <span class="error__mensage">Mensagem de erro</span>
+              </div>
+            </div>
+
             <div class="divisor">
               <span>header</span>
             </div>
@@ -317,13 +354,33 @@
                 data-copy="link"
                 data-js="linkPage"
               >
-                <label for="">Link da pagina*</label>
+                <label for="">Link do botão*</label>
                 <input class="" type="text" placeholder="Digite o link" />
                 <button>
                   <img src="../../assets/img/copypaste-icon.svg" alt="" />
                   <span class="tooltip">Link copiado</span>
                 </button>
                 <span class="error__mensage">Mensagem de erro</span>
+              </div>
+            </div>
+
+            <div class="col w25">
+              <div class="external-link">
+                <span>esta pagina deve aparecer no menu do site ?</span>
+
+                <div
+                  class="external-link__checkbox"
+                  data-validation="isValidity"
+                  data-name="isValidity"
+                >
+                  <small>Não</small>
+
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                  </label>
+                  <small>Sim</small>
+                </div>
               </div>
             </div>
 
@@ -694,6 +751,6 @@
     <script src="../../js/select.js"></script>
     <script src="../../js/textArea.js"></script>
     <script src="../../js/copypaste.js"></script>
-    <script src="../../js/pages/grupoHDI/grupoHDI.js"></script>
+    <script src="../../js/pages/paginas-avulsas/paginas-avulsas.js"></script>
   </body>
 </html>

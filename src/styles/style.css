@@ -952,6 +952,60 @@ input:checked + .slider:before {
   visibility: hidden;
 }
 
+.field__radio__container {
+  display: flex;
+  gap: 5.25rem;
+  margin-bottom: 3.125rem;
+}
+.field__radio__container .field__radio {
+  display: flex;
+}
+.field__radio__container label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 15px;
+  font-size: 13px;
+}
+.field__radio__container input[type=radio] {
+  display: none;
+}
+.field__radio__container label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 19px;
+  height: 19px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: green;
+  border: 1px solid green;
+}
+.field__radio__container label::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 19px;
+  height: 19px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: white;
+}
+.field__radio__container input[type=radio]:checked + label::after {
+  width: 7px;
+  height: 7px;
+  top: 7px;
+  left: 7px;
+  border: none;
+  transition: background 0.4s linear;
+}
+
 .content-language {
   display: flex;
   gap: 10px;

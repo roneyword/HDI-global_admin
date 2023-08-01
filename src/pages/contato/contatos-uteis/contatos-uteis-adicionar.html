@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../styles/style.css" />
+    <title>Contatos uteis</title>
+  </head>
+
+  <body>
+    <div class="menu">
+      <header>
+        <div class="container">
+          <div class="header__content">
+            <figure>
+              <a href=""
+                ><img src="../../../assets/img/header/logo.svg" alt=""
+              /></a>
+            </figure>
+
+            <button>Logout</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="menu__wrapper">
+        <aside class="menu__itens">
+          <ul class="menu__list">
+            <li class="menu__item">
+              Home
+              <span></span>
+              <ul class="sub__menu">
+                <li class="sub__link"><a href="">Header</a></li>
+                <li class="sub__link"><a href="">Atalhos</a></li>
+                <li class="sub__link"><a href="">Destaques</a></li>
+              </ul>
+            </li>
+            <li class="menu__item">
+              Produtos <span></span>
+              <ul class="sub__menu">
+                <li class="sub__link"><a href="">Categorias</a></li>
+                <li class="sub__link"><a href="">Produtos</a></li>
+                <li class="sub__link"><a href="">Por que escolher HDI</a></li>
+              </ul>
+            </li>
+            <li class="menu__item">
+              Acessos <span></span>
+              <ul class="sub__menu">
+                <li class="sub__link"><a href="">Header</a></li>
+                <li class="sub__link"><a href="">Destaques</a></li>
+              </ul>
+            </li>
+            <li class="menu__item">Grupo HDI <span></span></li>
+            <li class="menu__item">
+              Contato <span></span>
+              <ul class="sub__menu">
+                <li class="sub__link"><a href="">Contatos úteis</a></li>
+                <li class="sub__link"><a href="">Imprensa</a></li>
+                <li class="sub__link"><a href="">Trabalhe Conosco</a></li>
+                <li class="sub__link"><a href="">Fale Conosco</a></li>
+              </ul>
+            </li>
+            <li class="menu__item"><a href="">Usuários</a></li>
+            <li class="menu__item"><a href="">Paginas avulsas</a></li>
+          </ul>
+        </aside>
+
+        <div class="content">
+          <div class="content-title">
+            <h1>contatos | <span>Contatos uteis</span></h1>
+            <h2>Adicionar</h2>
+          </div>
+
+          <div class="content-language">
+            <button class="isActive" data-language="br">
+              <img src="../../../assets/img/flag-br-icon.svg" alt="" />
+            </button>
+
+            <button data-language="eua">
+              <img src="../../../assets/img/flag-eua-icon.svg" alt="" />
+            </button>
+          </div>
+
+          <div class="content-wrapper">
+            <div class="divisor">
+              <span>header</span>
+            </div>
+
+            <div class="col w25">
+              <div class="input__field" data-js="title">
+                <label for="">Titulo*</label>
+                <input type="text" placeholder="Digite o titulo" />
+                <span class="error__mensage">Mensagem de erro</span>
+              </div>
+            </div>
+
+            <div class="col w50">
+              <div class="textarea__field" data-js="description">
+                <label for="">Descrição*</label>
+                <textarea
+                  cols="30"
+                  rows="5"
+                  maxlength="100"
+                  placeholder="Digite o texto"
+                ></textarea>
+                <small>0/100</small>
+                <span class="error__mensage">Mensagem de erro</span>
+              </div>
+            </div>
+
+            <div class="col w25">
+              <div
+                class="file__field"
+                data-resolution="1920x1200"
+                data-sizeimg="1"
+                data-js="mainImg"
+              >
+                <label class="label">imagem principal*</label>
+                <div class="container_file__field">
+                  <label class="file">
+                    <span class="icon"></span>
+                    <span class="text"
+                      >Arraste e solte ou selecione arquivos.</span
+                    >
+                  </label>
+                  <input type="file" accept="image/png, image/jpeg" />
+                </div>
+                <div class="container-input-img-selected">
+                  <figure>
+                    <img id="image_preview" />
+                  </figure>
+                  <p class="name-img"></p>
+                  <div class="container-btn-cancel">
+                    <button>
+                      <img
+                        src="../../../assets/img/fields/icon-cancel.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+                <p class="descrption">
+                  São permitidos arquivos
+                  <span> PNG, JPEG </span>
+                  <span> até 1MB.</span>
+                </p>
+                <span id="file-message-error" class="descrption error"></span>
+              </div>
+            </div>
+
+            <div class="col w25">
+              <div class="textarea__field" data-js="altImgMain">
+                <label for="">Alt de imagem (principal)*</label>
+                <textarea
+                  cols="30"
+                  rows="5"
+                  maxlength="100"
+                  placeholder="Digite o texto"
+                ></textarea>
+                <small>0/100</small>
+                <span class="error__mensage">Mensagem de erro</span>
+              </div>
+            </div>
+
+            <div class="col w25">
+              <div
+                class="file__field"
+                data-resolution="1920x1200"
+                data-sizeimg="1"
+                data-js="imgTwo"
+              >
+                <label class="label">Imagem secundária*</label>
+                <div class="container_file__field">
+                  <label class="file">
+                    <span class="icon"></span>
+                    <span class="text"
+                      >Arraste e solte ou selecione arquivos.</span
+                    >
+                  </label>
+                  <input type="file" accept="image/png, image/jpeg" />
+                </div>
+                <div class="container-input-img-selected">
+                  <figure>
+                    <img id="image_preview" />
+                  </figure>
+                  <p class="name-img"></p>
+                  <div class="container-btn-cancel">
+                    <button>
+                      <img
+                        src="../../../assets/img/fields/icon-cancel.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+                <p class="descrption">
+                  São permitidos arquivos
+                  <span> PNG, JPEG </span>
+                  <span> até 1MB.</span>
+                </p>
+                <span id="file-message-error" class="descrption error"></span>
+              </div>
+            </div>
+
+            <div class="col w25">
+              <div class="textarea__field" data-js="altImgTwo">
+                <label for="">Alt de imagem (secundária)*</label>
+                <textarea
+                  cols="30"
+                  rows="5"
+                  maxlength="100"
+                  placeholder="Digite o texto"
+                ></textarea>
+                <small>0/100</small>
+                <span class="error__mensage">Mensagem de erro</span>
+              </div>
+            </div>
+
+            <div class="col w25">
+              <div
+                class="file__field"
+                data-resolution="1920x1200"
+                data-sizeimg="1"
+                data-js="thumb"
+              >
+                <label class="label">Thumb*</label>
+                <div class="container_file__field">
+                  <label class="file">
+                    <span class="icon"></span>
+                    <span class="text"
+                      >Arraste e solte ou selecione arquivos.</span
+                    >
+                  </label>
+                  <input type="file" accept="image/png, image/jpeg" />
+                </div>
+                <div class="container-input-img-selected">
+                  <figure>
+                    <img id="image_preview" />
+                  </figure>
+                  <p class="name-img"></p>
+                  <div class="container-btn-cancel">
+                    <button>
+                      <img
+                        src="../../../assets/img/fields/icon-cancel.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+                <p class="descrption">
+                  São permitidos arquivos
+                  <span> PNG, JPEG </span>
+                  <span> até 1MB.</span>
+                </p>
+                <span id="file-message-error" class="descrption error"></span>
+              </div>
+            </div>
+
+            <div class="divisor">
+              <span>corpo</span>
+            </div>
+
+            <div class="col w100">
+              <div class="card__container" data-group="bodygroup">
+                <div class="card" data-id="0">
+                  <div class="card__content">
+                    <div class="col w100">
+                      <div class="external-link">
+                        <span>status</span>
+
+                        <div
+                          class="external-link__checkbox"
+                          data-validation="isValidity"
+                          data-name="isActive"
+                        >
+                          <small>Inativo</small>
+
+                          <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider round"></span>
+                          </label>
+                          <small>Ativo</small>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col w50">
+                      <div
+                        class="input__field"
+                        data-validation="min"
+                        data-name="title"
+                      >
+                        <label for="">Titulo*</label>
+                        <input type="text" placeholder="Digite o titulo" />
+                        <span class="error__mensage">Mensagem de erro</span>
+                      </div>
+                    </div>
+
+                    <div class="col w50">
+                      <div
+                        class="textarea__field"
+                        data-validation="min"
+                        data-name="description"
+                      >
+                        <label for="">Descrição *</label>
+                        <textarea
+                          cols="30"
+                          rows="5"
+                          maxlength="100"
+                          placeholder="Digite o texto"
+                        ></textarea>
+                        <small>0/100</small>
+                        <span class="error__mensage">Mensagem de erro</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card__controler">
+                    <button class="btn card__controler__close d-none">
+                      <img src="../../../assets/img/close-icon.svg" alt="" />
+                    </button>
+                    <button class="btn green-secondary card__controler__add">
+                      + Adicionar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-footer">
+              <button class="btn green-primary">Salvar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../../js/menu.js"></script>
+    <script src="../../../js/select.js"></script>
+    <script src="../../../js/textArea.js"></script>
+    <script src="../../../js/copypaste.js"></script>
+    <script src="../../../js/pages/contato/contatos-uteis/contatos-uteis.js"></script>
+  </body>
+</html>
