@@ -1,8 +1,7 @@
-const inputFieldLink = document.querySelectorAll("[data-copy='link']");
-inputFieldLink.forEach((link) => {
-  const handleCopy = link.querySelector("button");
-  const inputValue = link.querySelector("input");
-  const tooltip = link.querySelector(".tooltip");
+const copyPast = (field) => {
+  const handleCopy = field.querySelector("button");
+  const inputValue = field.querySelector("input");
+  const tooltip = field.querySelector(".tooltip");
 
   handleCopy.addEventListener("click", () => {
     tooltip.innerHTML = !inputValue.value.length
@@ -19,4 +18,6 @@ inputFieldLink.forEach((link) => {
       tooltip.classList.remove("isActive");
     }, 2000);
   });
-});
+};
+
+export default copyPast;

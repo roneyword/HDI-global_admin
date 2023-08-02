@@ -1,0 +1,21 @@
+.ck-rounded-corners .ck.ck-editor__editable:not(.ck-editor__nested-editable),
+.ck.ck-editor__editable.ck-rounded-corners:not(.ck-editor__nested-editable) {
+  border-radius: 0px;
+}
+
+.ck.ck-editor__editable.ck-focused:not(.ck-editor__nested-editable) {
+  box-shadow: 0px 0px red;
+  outline: none;
+  border: 1px solid black;
+}
+
+.ck-editor__editable[role="textbox"] {
+  min-height: pxtorem(150);
+  border: 1px solid $black;
+  border-radius: 0;
+
+  * {
+    font-family: "HDI Pro Book";
+    font-size: pxtorem(14);
+  }
+}

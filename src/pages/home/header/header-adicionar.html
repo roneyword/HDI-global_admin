@@ -5,7 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../../styles/style.css" />
+    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/38.1.1/classic/ckeditor.js"></script> -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/38.1.1/balloon/ckeditor.js"></script>
     <title>home header add</title>
+
+    <style>
+      .ck-editor__editable[role="textbox"] {
+        min-height: 150px;
+        border: 1px solid black;
+      }
+    </style>
   </head>
 
   <body>
@@ -100,12 +109,10 @@
             <div class="col w25">
               <div class="textarea__field" data-js="text">
                 <label for="">Texto*</label>
-                <textarea
-                  cols="30"
-                  rows="5"
-                  maxlength="100"
-                  placeholder="Digite o texto"
-                ></textarea>
+
+                <div class="editor" maxlength="100">
+                  <p>Digite o texto</p>
+                </div>
                 <small>0/100</small>
                 <span class="error__mensage">Mensagem de erro</span>
               </div>
@@ -135,7 +142,10 @@
                   <p class="name-img"></p>
                   <div class="container-btn-cancel">
                     <button>
-                      <img src="assets/img/fields/icon-cancel.svg" alt="" />
+                      <img
+                        src="../../../assets/img/fields/icon-cancel.svg"
+                        alt=""
+                      />
                     </button>
                   </div>
                 </div>
@@ -172,7 +182,10 @@
                   <p class="name-img"></p>
                   <div class="container-btn-cancel">
                     <button>
-                      <img src="assets/img/fields/icon-cancel.svg" alt="" />
+                      <img
+                        src="../../../assets/img/fields/icon-cancel.svg"
+                        alt=""
+                      />
                     </button>
                   </div>
                 </div>
@@ -269,9 +282,10 @@
     </div>
 
     <script src="../../../js/menu.js"></script>
-    <script src="../../../js/select.js"></script>
-    <script src="../../../js/copypaste.js"></script>
-    <script src="../../../js/textArea.js"></script>
-    <script src="../../../js/pages/home/home-header/header-add.js"></script>
+
+    <script
+      type="module"
+      src="../../../js/pages/home/home-header/header-add.js"
+    ></script>
   </body>
 </html>

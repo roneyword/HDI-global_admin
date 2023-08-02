@@ -1,3 +1,4 @@
+// somente teste pode apagar
 // pega todos os elementos
 const cardContainer = document.querySelectorAll(".card__container");
 
